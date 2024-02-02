@@ -1,14 +1,12 @@
-# JSON Schema Guide
+# JSON Schema
 
-This README provides a concise guide on using JSON Schema, focusing on its usage, structure, and versioning. JSON Schema is a powerful tool for validating the structure of JSON data, making it invaluable for developers working with JSON formats.
+This repository acts as a store for all json schema files used in e2g projects.
 
 ## Usage
 
-To use JSON Schema for validating JSON data:
+To use JSON Schema:
 
 1. **Define your schema**: Create a JSON Schema definition that describes the structure of your JSON data. This includes specifying properties, types, and other validation keywords.
-
-2. **Validate JSON data**: Use a JSON Schema validation tool or library to validate JSON data against your schema. This can be done programmatically in various programming languages or using online validators.
 
 ## Structure
 
