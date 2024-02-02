@@ -1,7 +1,10 @@
 name: Validate JSON
 
-on: [push, pull_request]
-
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  
 jobs:
   json_validation:
     runs-on: ubuntu-latest
