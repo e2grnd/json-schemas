@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://e2grnd.github.io/json-schemas/v0/input.timeseries.schema.json",
+  "title": "Timeseries Input",
+  "description": "Input for timeseries data",
+  "type": "object",
+  "properties": {
+    "data-csv": {
+      "description": "A pointer to a CSV file containing the timeseries data",
+      "type": "object",
+      "properties": {
+        "url": {
+          "description": "URL to the CSV file",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    },
+    "sensor-id": {
+      "type": "string"
+    },
+    "sensor-name": {
+      "type": "string"
+    },
+    "time-bucket-size": {
+      "description": "The size of the time bucket (integer)",
+      "type": "number"
+    },
+    "time-bucket-unit": {
+      "description": "The unit of the time bucket (e.g. 'hours')",
+      "type": "string"
+    },
+    "units": {
+      "description": "The units of the timeseries data (e.g. 'pH' or 'µS')",
+      "type": "string"
+    },
+    "metadata": {
+      "description": "Metadata about the timeseries data",
+      "type": "object"
+    },
+    "required": [
+      "csv-data-file",
+      "units"
+    ]
+  }
+}
