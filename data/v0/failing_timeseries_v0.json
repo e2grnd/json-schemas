@@ -1,0 +1,10 @@
+{
+    "data-csv": {
+      "url": 123 
+    },
+    "sensor-id": "sensor-123",
+    "sensor-name": "Temperature Sensor",
+    "time-bucket-unit": "hours",
+    "metadata": {}
+  }
+  

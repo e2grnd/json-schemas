@@ -1,0 +1,7 @@
+{
+  "name": "json-schemas",
+  "packageManager": "yarn@3.2.2",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
