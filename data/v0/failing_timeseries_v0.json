@@ -4,7 +4,6 @@
     },
     "sensor-id": "sensor-123",
     "sensor-name": "Temperature Sensor",
-    "time-bucket-unit": "hours",
-    "metadata": {}
+    "time-bucket-unit": "hours"
   }
   

@@ -29,20 +29,48 @@
       "type": "number"
     },
     "time-bucket-unit": {
-      "description": "The unit of the time bucket (e.g. 'hours')",
-      "type": "string"
+      "description": "The unit of the time bucket (e.g. 'hour')",
+      "type": "string",
+      "enum": [
+        "hour",
+        "day",
+        "week",
+        "month",
+        "year"
+      ]
     },
     "units": {
       "description": "The units of the timeseries data (e.g. 'pH' or 'µS')",
       "type": "string"
     },
+    "date-start": {
+      "description": "The start date of the timeseries data in ISO 8601 format",
+      "type": "string"
+    },
+    "date-end": {
+      "description": "The end date of the timeseries data in ISO 8601 format",
+      "type": "string"
+    },
+    "operation": {
+      "description": "The operation to perform on the timeseries data (e.g. 'avg')",
+      "enum": [
+        "avg",
+        "min",
+        "max",
+        "sum"
+      ]
+    },
     "metadata": {
       "description": "Metadata about the timeseries data",
       "type": "object"
-    },
-    "required": [
-      "csv-data-file",
-      "units"
-    ]
-  }
+    }
+  },
+  "required": [
+    "data-csv",
+    "sensor-id",
+    "units",
+    "time-bucket-size",
+    "time-bucket-unit",
+    "operation"
+  ]
 }

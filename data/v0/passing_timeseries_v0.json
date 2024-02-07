@@ -1,12 +1,12 @@
 {
-    "data-csv": {
-      "url": "https://example.com/data.csv"
-    },
-    "sensor-id": "sensor-123",
-    "sensor-name": "Temperature Sensor",
-    "time-bucket-size": 1,
-    "time-bucket-unit": "hours",
-    "units": "Celsius",
-    "metadata": {}
-  }
-  
+  "data-csv": {
+    "url": "https://example.com/timeseries.csv"
+  },
+  "sensor-id": "sensor-12345",
+  "sensor-name": "Temperature Sensor",
+  "time-bucket-size": 1,
+  "time-bucket-unit": "hour",
+  "units": "Celsius",
+  "metadata": {},
+  "operation": "max"
+}

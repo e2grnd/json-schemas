@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeseries data validation validates failing data against the schema 1`] = `
+[
+  {
+    "instancePath": "",
+    "keyword": "required",
+    "message": "must have required property 'units'",
+    "params": {
+      "missingProperty": "units",
+    },
+    "schemaPath": "#/required",
+  },
+  {
+    "instancePath": "",
+    "keyword": "required",
+    "message": "must have required property 'time-bucket-size'",
+    "params": {
+      "missingProperty": "time-bucket-size",
+    },
+    "schemaPath": "#/required",
+  },
+  {
+    "instancePath": "",
+    "keyword": "required",
+    "message": "must have required property 'operation'",
+    "params": {
+      "missingProperty": "operation",
+    },
+    "schemaPath": "#/required",
+  },
+  {
+    "instancePath": "/data-csv/url",
+    "keyword": "type",
+    "message": "must be string",
+    "params": {
+      "type": "string",
+    },
+    "schemaPath": "#/properties/data-csv/properties/url/type",
+  },
+  {
+    "instancePath": "/time-bucket-unit",
+    "keyword": "enum",
+    "message": "must be equal to one of the allowed values",
+    "params": {
+      "allowedValues": [
+        "hour",
+        "day",
+        "week",
+        "month",
+        "year",
+      ],
+    },
+    "schemaPath": "#/properties/time-bucket-unit/enum",
+  },
+]
+`;
