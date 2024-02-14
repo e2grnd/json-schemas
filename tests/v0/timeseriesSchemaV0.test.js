@@ -4,7 +4,6 @@ const Ajv = require('ajv/dist/2020').default;
 const ajv = new Ajv({ strict: false, allErrors: true});
 
 const timeseriesSchema = require('../../v0/input.timeseries.schema.json');
-ajv.getSchema("https://json-schema.org/draft/2020-12/schema")
 const validate_timeseries = ajv.compile(timeseriesSchema);
 
 
