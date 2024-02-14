@@ -9,13 +9,13 @@
       "description": "A pointer to a CSV file containing the timeseries data",
       "type": "object",
       "properties": {
-        "url": {
-          "description": "URL to the CSV file",
+        "storage-key": {
+          "description": "Path to the CSV file",
           "type": "string"
         }
       },
       "required": [
-        "url"
+        "storage-key"
       ]
     },
     "sensor-id": {
