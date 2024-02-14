@@ -1,6 +1,6 @@
 {
     "data-csv": {
-      "url": 123 
+      "storage-key": 123 
     },
     "sensor-id": "sensor-123",
     "sensor-name": "Temperature Sensor",

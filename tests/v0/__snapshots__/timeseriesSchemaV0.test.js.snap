@@ -30,13 +30,13 @@ exports[`Timeseries data validation validates failing data against the schema 1`
     "schemaPath": "#/required",
   },
   {
-    "instancePath": "/data-csv/url",
+    "instancePath": "/data-csv/storage-key",
     "keyword": "type",
     "message": "must be string",
     "params": {
       "type": "string",
     },
-    "schemaPath": "#/properties/data-csv/properties/url/type",
+    "schemaPath": "#/properties/data-csv/properties/storage-key/type",
   },
   {
     "instancePath": "/time-bucket-unit",
