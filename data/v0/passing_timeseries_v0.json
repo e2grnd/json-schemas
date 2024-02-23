@@ -1,6 +1,6 @@
 {
   "data-csv": {
-    "storage-key": "https://example.com/timeseries.csv"
+    "storage-key": "/dev/timeseries/{JOBID}.csv"
   },
   "sensor-id": "sensor-12345",
   "sensor-name": "Temperature Sensor",
