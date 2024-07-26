@@ -29,7 +29,8 @@
   },
   "required": [
     "name",
-    "thresholdValue",
+    "value",
+    "message",
     "expression"
   ]
 }
