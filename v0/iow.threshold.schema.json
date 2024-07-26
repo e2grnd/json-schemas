@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://e2grnd.github.io/json-schemas/v0/iow.threshold.schema.json",
+  "title": "Integrity Operating Window Threshold",
+  "description": "Integrity Operating Window Threshold",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "number"
+    },
+    "message": {
+      "type": "string"
+    },
+    "expression": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "UNSPECIFIED",
+        "INFORMATIONAL",
+        "STANDARD",
+        "CRITICAL"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "thresholdValue",
+    "expression"
+  ]
+}
