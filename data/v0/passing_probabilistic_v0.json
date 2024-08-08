@@ -1,0 +1,38 @@
+{
+  "name": "temperature",
+  "kind": "nature",
+  "type": "continuous",
+  "parents": null,
+  "states": {
+      "levels": [
+          400,
+          425,
+          450,
+          475,
+          500,
+          525,
+          550,
+          575,
+          600,
+          625,
+          650,
+          675,
+          700,
+          725,
+          750,
+          775,
+          800
+      ]
+  },
+  "CPT": {
+      "neticaEquation": "p(temperature|)=NormalDist(temperature, 600, 50)",
+      "sampleSize": 10
+  },
+  "distributionType": "normal",
+  "median": 600,
+  "varianceType": "standardDeviation",
+  "standardDeviation": 50,
+  "randomKeyTest": {
+    "randomObjTest": "placeholder"
+  }
+}

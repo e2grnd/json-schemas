@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://e2grnd.github.io/json-schemas/v0/input.probabilistic.schema.json",
+  "title": "Probabilistic Input",
+  "description": "Input for probabilistic data",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Name of the bayes net being created",
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "discrete",
+        "continuous"
+      ]
+    },
+    "parents": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "states": {
+      "type": "object",
+      "properties": {
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "levels": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unknown"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "CPT": {
+      "type": "object",
+      "properties": {
+        "table": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "neticaEquation": {
+          "type": "string"
+        },
+        "sampleSize": {
+          "type": "number"
+        }
+      }
+    },
+    "mean": {
+      "type": ["number", "null"]
+    },
+    "standardDeviation": {
+      "type": ["number", "null"]
+    },
+    "cv": {
+      "type": ["number", "null"]
+    },
+    "upperBound": {
+      "type": ["number", "null"]
+    },
+    "upperBoundConfidence": {
+      "type": ["number", "null"]
+    },
+    "location": {
+      "type": ["number", "null"]
+    },
+    "scale": {
+      "type": ["number", "null"]
+    },
+    "distributionType": {},
+    "varianceType": {}
+  },
+  "required": [
+    "type"
+  ]
+}
