@@ -21,6 +21,10 @@
     "sensor-id": {
       "type": "string"
     },
+    "dcs-id": {
+      "type": "string",
+      "description": "Which DCS system the sensor belongs to"
+    },
     "sensor-name": {
       "type": "string"
     },
@@ -68,6 +72,7 @@
   "required": [
     "data-csv",
     "sensor-id",
+    "dcs-id",
     "units",
     "time-bucket-size",
     "time-bucket-unit",
