@@ -74,7 +74,17 @@
         "table": {
           "type": "array",
           "items": {
-            "type": "number"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              {
+                "type": "number"
+              }
+            ]
           }
         },
         "neticaEquation": {
@@ -86,25 +96,46 @@
       }
     },
     "mean": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "standardDeviation": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "cv": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "upperBound": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "upperBoundConfidence": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "location": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "scale": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "distributionType": {},
     "varianceType": {}

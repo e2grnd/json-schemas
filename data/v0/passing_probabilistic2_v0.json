@@ -1,43 +1,25 @@
 {
   "name": "temperature",
   "kind": "nature",
-  "type": "continuous",
+  "type": "discrete",
   "parents": null,
   "states": {
-    "levels": [
-      400,
-      425,
-      450,
-      475,
-      500,
-      525,
-      550,
-      575,
-      600,
-      625,
-      650,
-      675,
-      700,
-      725,
-      750,
-      775,
-      800
+    "states": [
+      "low",
+      "medium",
+      "high"
     ]
   },
+  "evidence": [
+    0.5,
+    0.3,
+    0.2
+  ],
   "CPT": {
     "table": [
-      [
-        3,
-        5
-      ],
-      [
-        3,
-        6
-      ],
-      [
-        1,
-        5
-      ]
+      2,
+      4,
+      3
     ],
     "neticaEquation": "p(temperature|)=NormalDist(temperature, 600, 50)",
     "sampleSize": 10

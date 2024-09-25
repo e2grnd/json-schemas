@@ -15,6 +15,13 @@ describe('Probabilistic data validation', () => {
     expect(isValid).toBeTruthy(); // Assert that the data passes validation
   });
 
+  it('validates a different case of passing data against the schema', () => {
+    const passingData = require('../../data/v0/passing_probabilistic2_v0.json');
+    const isValid = validate_probabilistic(passingData);
+    expect(validate_probabilistic.errors).toBeNull();
+    expect(isValid).toBeTruthy(); // Assert that the data passes validation
+  });
+
   it('validates failing data against the schema', () => {
     const failingData = require('../../data/v0/failing_probabilistic_v0.json');
     const isValid = validate_probabilistic(failingData);

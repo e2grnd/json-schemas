@@ -5,6 +5,15 @@ exports[`Timeseries data validation validates failing data against the schema 1`
   {
     "instancePath": "",
     "keyword": "required",
+    "message": "must have required property 'dcs-id'",
+    "params": {
+      "missingProperty": "dcs-id",
+    },
+    "schemaPath": "#/required",
+  },
+  {
+    "instancePath": "",
+    "keyword": "required",
     "message": "must have required property 'units'",
     "params": {
       "missingProperty": "units",
