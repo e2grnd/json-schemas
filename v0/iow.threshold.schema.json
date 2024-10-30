@@ -30,6 +30,10 @@
         "STANDARD",
         "CRITICAL"
       ]
+    },
+    "paramName": {
+      "type": "string",
+      "description": "The name of the calculation output parameter to which the threshold applies"
     }
   },
   "required": [
