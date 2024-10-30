@@ -6,19 +6,24 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "description": "A unique id for the threshold. Required to differentiate between expressions in a given invocation"
     },
     "value": {
-      "type": "number"
+      "type": "number",
+      "description": "The numeric value of the threshold. This value is passed in to the expression as the thresholdValue variable. Also displayed on charts."
     },
     "message": {
-      "type": "string"
+      "type": "string",
+      "description": "A message to display when the threshold is breached. This message is displayed on charts."
     },
     "expression": {
-      "type": "string"
+      "type": "string",
+      "description": "The expr expression to evaluate"
     },
     "severity": {
       "type": "string",
+      "description": "The severity of the threshold",
       "enum": [
         "UNSPECIFIED",
         "INFORMATIONAL",
