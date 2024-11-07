@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Asset Dashboard data validation validates failing data against the schema 1`] = `
+[
+  {
+    "instancePath": "/layout/0",
+    "keyword": "required",
+    "message": "must have required property 'x'",
+    "params": {
+      "missingProperty": "x",
+    },
+    "schemaPath": "#/properties/layout/items/required",
+  },
+  {
+    "instancePath": "/layout/0",
+    "keyword": "required",
+    "message": "must have required property 'y'",
+    "params": {
+      "missingProperty": "y",
+    },
+    "schemaPath": "#/properties/layout/items/required",
+  },
+  {
+    "instancePath": "/layout/0",
+    "keyword": "required",
+    "message": "must have required property 'w'",
+    "params": {
+      "missingProperty": "w",
+    },
+    "schemaPath": "#/properties/layout/items/required",
+  },
+]
+`;

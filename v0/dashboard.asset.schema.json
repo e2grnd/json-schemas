@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://e2grnd.github.io/json-schemas/v0/layout.asset-analysis-dashboard.schema.json",
+  "title": "Asset Analysis Dashboard Layout",
+  "description": "Information to track widget state and user interactions with the Asset Analysis Dashboard",
+  "type": "object",
+  "properties": {
+    "layout": {
+      "description": "The layout of the widgets in the dashboard, according to react-grid-layout",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "i": {
+            "description": "Unique identifier for the widget",
+            "type": "string"
+          },
+          "x": {
+            "description": "The x coordinate of the widget in the grid",
+            "type": "number"
+          },
+          "y": {
+            "description": "The y coordinate of the widget in the grid",
+            "type": "number"
+          },
+          "w": {
+            "description": "The width of the widget in the grid",
+            "type": "number"
+          },
+          "h": {
+            "description": "The height of the widget in the grid",
+            "type": "number"
+          },
+          "isBounded": {
+            "description": "If true and draggable, item will be moved only within grid",
+            "type": "boolean"
+          },
+          "isDraggable": {
+            "description": "If false, will not be draggable. Overrides static",
+            "type": "boolean"
+          },
+          "isResizable": {
+            "description": "If false, will not be resizable. Overrides static",
+            "type": "boolean"
+          },
+          "maxH": {
+            "description": "Maximum height of the widget",
+            "type": "number"
+          },
+          "maxW": {
+            "description": "Maximum width of the widget",
+            "type": "number"
+          },
+          "minH": {
+            "description": "Minimum height of the widget",
+            "type": "number"
+          },
+          "minW": {
+            "description": "Minimum width of the widget",
+            "type": "number"
+          },
+          "static": {
+            "description": "If true, item will not be draggable or resizable",
+            "type": "boolean"
+          },
+          "moved": {
+            "description": "Set by grid drag events",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "i",
+          "x",
+          "y",
+          "w",
+          "h"
+        ]
+      }
+    },
+    "content": {
+      "description": "The content of each widget in the dashboard",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "identifier": {
+            "type": "string",
+            "description": "The unique identifier of the widget. maps to \"i\" in the layout"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of widget",
+            "enum": [
+              "raw-sensor-data",
+              "sensor-eval-cron-job",
+              "unit-calculation-results",
+              "asset-component-calculation-results",
+              "iow-violations",
+              "calculation-cron-job"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the widget"
+          }
+        },
+        "required": [
+          "identifier",
+          "type"
+        ]
+      }
+    }
+  }
+}

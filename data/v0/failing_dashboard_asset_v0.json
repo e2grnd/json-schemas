@@ -1,0 +1,67 @@
+{
+  "layout": [
+    {
+      "h": 15,
+      "i": "s",
+      "movedIt": false,
+      "static": true
+    },
+    {
+      "w": 5,
+      "h": 15,
+      "x": 6,
+      "y": 0,
+      "i": "t",
+      "moved": false,
+      "static": true
+    },
+    {
+      "w": 11,
+      "h": 15,
+      "x": 0,
+      "y": 15,
+      "i": "u",
+      "moved": false,
+      "static": true
+    }
+  ],
+  "content": [
+    {
+      "refresh": 60000,
+      "type": "asset-component-calculation-results",
+      "mainTitle": "Widget Title",
+      "assetComponentCalculationResultsConfig": {
+        "unit": "id",
+        "plant": "id",
+        "asset": "id",
+        "componentId": "id",
+        "outputParam": "failureProb"
+      },
+      "identifier": "s"
+    },
+    {
+      "refreshRate": 60000,
+      "type": "raw-sensor-data",
+      "title": "Widget Title",
+      "dcsConfig": {
+        "dcs": "2723f93f-bcb6-4d13-8063-0c86984ed894",
+        "sensor": "52ca4be8-ee20-46b5-b6be-803f50b93b6c",
+        "dateStart": "2024-10-07",
+        "dateEnd": "2024-11-07",
+        "timeBucketSize": 1,
+        "timeBucketUnit": "day",
+        "timeBucketOperation": "avg",
+        "endDateType": "current"
+      },
+      "subtitle": "Overhead Top of Tower H2O - After Water Wash",
+      "identifier": "t"
+    },
+    {
+      "refreshRate": 599940000,
+      "type": "iow-violations",
+      "title": "teteteteetet",
+      "subtitle": "werwerwer",
+      "identifier": "u"
+    }
+  ]
+}
