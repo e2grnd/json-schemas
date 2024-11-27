@@ -33,7 +33,12 @@
     },
     "calculatorName": {
       "type": "string",
-      "description": "The name of the calculator that the threshold applies to"
+      "description": "Use calculatorId instead",
+      "deprecated": true
+    },
+    "calculatorId": {
+      "type": "string",
+      "description": "The ID of the calculator that the threshold applies to"
     },
     "paramName": {
       "type": "string",
