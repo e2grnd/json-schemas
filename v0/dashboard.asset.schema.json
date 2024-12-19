@@ -91,6 +91,7 @@
             "type": "string",
             "description": "The type of widget",
             "enum": [
+              "sensor-data",
               "raw-sensor-data",
               "sensor-eval-cron-job",
               "unit-calculation-results",
