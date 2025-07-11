@@ -1,0 +1,15 @@
+{
+  "archiveFileName": "circuits_data_2025.zip",
+  "createdBy": "test_user",
+  "createdAt": "2025-07-11T12:00:00Z",
+  "circuits": [
+    {
+      "id": "CIR-001",
+      "description": "Main circuit for DA analysis."
+    },
+    {
+      "id": "CIR-002",
+      "description": "Backup circuit."
+    }
+  ]
+}

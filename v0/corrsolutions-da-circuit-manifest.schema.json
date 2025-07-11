@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://e2grnd.github.io/json-schemas/v0/corrsolutions-da-circuit-manifest.schema.json",
+  "title": "CorrSolutions DA Circuit Manifest",
+  "description": "Manifest for CorrSolutions DA Circuit data uploads used in the Degradation Analysis calculator.",
+  "type": "object",
+  "properties": {
+    "archiveFileName": {
+      "type": "string",
+      "description": "The file name of the archive containing the data files."
+    },
+    "format": {
+      "type": "string",
+      "description": "The format of the data files described by this manifest.",
+      "enum": [
+        "CSV",
+        "SQLITE"
+      ],
+      "default": "CSV"
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "The user that created the manifest."
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "The timestamp when the manifest was created, in RFC 3339 format.",
+      "format": "date-time"
+    },
+    "circuits": {
+      "type": "array",
+      "description": "List of circuits described by this manifest.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the circuit."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the circuit."
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    }
+  },
+  "required": [
+    "archiveFileName",
+    "createdBy",
+    "createdAt",
+    "circuits"
+  ]
+}
