@@ -14,6 +14,11 @@
     "data"
   ],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL of the JSON Schema describing this envelope and its event-specific data payload. Consumers can use this to validate the envelope or discover the schema version without parsing other fields."
+    },
     "id": {
       "type": "string",
       "format": "uuid",
