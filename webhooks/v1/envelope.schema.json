@@ -45,7 +45,22 @@
       "description": "Short identifier for the tenant that owns the resource that generated the event (e.g. 'acme')."
     },
     "data": {
-      "description": "Event-specific payload. The envelope schema intentionally imposes no structure here; individual event-data schemas (keyed by eventType + schemaVersion) constrain this field."
+      "description": "Event-specific payload. The schema is discriminated by the eventType field.",
+      "oneOf": [
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.eec.completed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.eec.created.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.eec.failed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.eec.started.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.sage.completed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.sage.created.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.sage.failed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.sage.started.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/plantmanager.equipment.created.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/plantmanager.equipment.deleted.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/plantmanager.equipment.updated.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/subscription.disabled.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v1/webhook.test.schema.json" }
+      ]
     }
   }
 }
