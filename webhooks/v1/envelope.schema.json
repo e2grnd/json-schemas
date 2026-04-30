@@ -27,7 +27,7 @@
     "eventType": {
       "type": "string",
       "pattern": "^[a-z][a-z0-9]*(\\.[a-z][a-z0-9]*)+$",
-      "description": "Dot-separated event type name following the '<resource>.<product>.<verb>' convention (e.g. 'calculation.sage.completed'). Specificity increases left-to-right. Must contain at least two segments; each segment starts with a lowercase letter and contains only lowercase letters and digits."
+      "description": "Dot-separated event type name following the '<domain>.<resource-type>.<verb>' convention (e.g. 'calculation.sage.completed', 'plantmanager.equipment.created'). Specificity increases left-to-right. The first segment is the broadest useful namespace (a functional category or product name); the second is the specific resource type; the third is the past-tense verb. Must contain at least two segments; each segment starts with a lowercase letter and contains only lowercase letters and digits."
     },
     "schemaVersion": {
       "type": "string",
