@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/eec.calculation.completed.schema.json",
-  "title": "eec.calculation.completed data",
-  "description": "Data payload for the eec.calculation.completed event. Models EecCalcOutput from activitycontracts: includes eecJobId (upstream NUID from job-grpc Init RPC) and durationMs alongside result access.",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.eec.completed.schema.json",
+  "title": "calculation.eec.completed data",
+  "description": "Data payload for the calculation.eec.completed event. Models EecCalcOutput from activitycontracts: includes eecJobId (upstream NUID from job-grpc Init RPC) and durationMs alongside result access.",
   "type": "object",
   "additionalProperties": false,
   "required": ["jobId", "tenantKey", "calcType"],

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/eec.calculation.failed.schema.json",
-  "title": "eec.calculation.failed data",
-  "description": "Data payload for the eec.calculation.failed event. Models CalcResult.Error from activitycontracts alongside standard traceability fields.",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.sage.failed.schema.json",
+  "title": "calculation.sage.failed data",
+  "description": "Data payload for the calculation.sage.failed event. Models CalcResult.Error from activitycontracts alongside standard traceability fields.",
   "type": "object",
   "additionalProperties": false,
   "required": ["jobId", "tenantKey", "calcType"],
@@ -18,8 +18,8 @@
     },
     "calcType": {
       "type": "string",
-      "enum": ["eec"],
-      "description": "Calculator type. Always 'eec' for this event."
+      "enum": ["sage"],
+      "description": "Calculator type. Always 'sage' for this event."
     },
     "calcName": {
       "type": "string",
@@ -32,7 +32,7 @@
     },
     "errorCode": {
       "type": "string",
-      "description": "Machine-readable error code (e.g. 'TIMEOUT', 'WORKER_PANIC', 'JOB_GRPC_ERROR')."
+      "description": "Machine-readable error code (e.g. 'TIMEOUT', 'WORKER_PANIC', 'SAGE_API_ERROR')."
     },
     "errorMessage": {
       "type": "string",

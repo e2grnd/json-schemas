@@ -27,7 +27,7 @@
     "eventType": {
       "type": "string",
       "pattern": "^[a-z][a-z0-9]*(\\.[a-z][a-z0-9]*)+$",
-      "description": "Dot-separated event type name following the '<product>.<resource>.<verb>' convention (e.g. 'sage.calculation.completed'). Must contain at least two segments; each segment starts with a lowercase letter and contains only lowercase letters and digits."
+      "description": "Dot-separated event type name following the '<resource>.<product>.<verb>' convention (e.g. 'calculation.sage.completed'). Specificity increases left-to-right. Must contain at least two segments; each segment starts with a lowercase letter and contains only lowercase letters and digits."
     },
     "schemaVersion": {
       "type": "string",

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/eec.calculation.started.schema.json",
-  "title": "eec.calculation.started data",
-  "description": "Data payload for the eec.calculation.started event, emitted when an EEC calculation job begins execution on a worker.",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.eec.started.schema.json",
+  "title": "calculation.eec.started data",
+  "description": "Data payload for the calculation.eec.started event, emitted when an EEC calculation job begins execution on a worker.",
   "type": "object",
   "additionalProperties": false,
   "required": ["jobId", "tenantKey", "calcType"],

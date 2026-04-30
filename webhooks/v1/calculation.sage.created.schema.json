@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/sage.calculation.created.schema.json",
-  "title": "sage.calculation.created data",
-  "description": "Data payload for the sage.calculation.created event, emitted when a Sage calculation job is accepted and queued.",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v1/calculation.sage.created.schema.json",
+  "title": "calculation.sage.created data",
+  "description": "Data payload for the calculation.sage.created event, emitted when a Sage calculation job is accepted and queued.",
   "type": "object",
   "additionalProperties": false,
   "required": ["jobId", "tenantKey", "calcType"],
