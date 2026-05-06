@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Timeseries data validation validates failing data against the schema 1`] = `
+exports[`Timeseries data validation > validates failing data against the schema 1`] = `
 [
   {
     "instancePath": "",

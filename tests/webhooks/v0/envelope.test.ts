@@ -1,32 +1,35 @@
-const Ajv = require("ajv").default
-const addFormats = require("ajv-formats")
-const path = require("path")
-const fs = require("fs")
+import Ajv from "ajv"
+import addFormats from "ajv-formats"
+import { join, dirname } from "node:path"
+import { readFileSync } from "node:fs"
+import { fileURLToPath } from "node:url"
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // ---------------------------------------------------------------------------
 // Setup: load all schemas into Ajv so $refs resolve locally (no network)
 // ---------------------------------------------------------------------------
 
-const SCHEMA_DIR = path.join(__dirname, "../../../webhooks/v0")
-const REPO_ROOT = path.join(__dirname, "../../..")
+const SCHEMA_DIR = join(__dirname, "../../../webhooks/v0")
+const REPO_ROOT = join(__dirname, "../../..")
 const BASE_URL = "https://e2grnd.github.io/json-schemas/"
 
 const ajv = new Ajv({
   strict: false,
   allErrors: true,
-  loadSchema: async (uri) => {
+  loadSchema: async (uri: string) => {
     if (!uri.startsWith(BASE_URL))
       throw new Error(`Unexpected $ref URI: ${uri}`)
     const rel = uri.slice(BASE_URL.length)
-    return JSON.parse(fs.readFileSync(path.join(REPO_ROOT, rel), "utf8"))
+    return JSON.parse(readFileSync(join(REPO_ROOT, rel), "utf8"))
   },
 })
 addFormats(ajv)
 
 const envelopeSchema = JSON.parse(
-  fs.readFileSync(path.join(SCHEMA_DIR, "envelope.schema.json"), "utf8"),
+  readFileSync(join(SCHEMA_DIR, "envelope.schema.json"), "utf8"),
 )
-let validate
+let validate: Ajv["validate"]
 beforeAll(async () => {
   validate = await ajv.compileAsync(envelopeSchema)
 })
@@ -36,7 +39,11 @@ beforeAll(async () => {
 // ---------------------------------------------------------------------------
 
 /** Build a minimal-valid envelope, merging in overrides. */
-function envelope(eventType, data, overrides = {}) {
+function envelope(
+  eventType: string,
+  data: unknown,
+  overrides: Record<string, unknown> = {},
+) {
   return {
     id: "01912c45-0000-7000-8000-000000000001",
     eventType,
@@ -48,7 +55,7 @@ function envelope(eventType, data, overrides = {}) {
   }
 }
 
-function isValid(doc) {
+function isValid(doc: unknown) {
   const result = validate(doc)
   return { result, errors: validate.errors }
 }
@@ -77,7 +84,7 @@ const SAGE_BASE = {
 const EQUIP_ID = "01912c45-0000-7000-8000-000000000010"
 const SUB_ID = "01912c45-0000-7000-8000-000000000020"
 
-const FIXTURES = {
+const FIXTURES: Record<string, Record<string, unknown>> = {
   "calculation.eec.completed": {
     ...EEC_BASE,
     completedAt: "2025-01-15T12:01:00.000Z",
@@ -273,8 +280,8 @@ describe("envelope.schema.json", () => {
         const schemaId = `https://e2grnd.github.io/json-schemas/webhooks/v0/${eventType}.schema.json`
         const validateSingle = ajv.getSchema(schemaId)
         expect(validateSingle).toBeDefined()
-        const result = validateSingle(FIXTURES[eventType])
-        expect(validateSingle.errors).toBeNull()
+        const result = validateSingle!(FIXTURES[eventType])
+        expect(validateSingle!.errors).toBeNull()
         expect(result).toBe(true)
       })
     }

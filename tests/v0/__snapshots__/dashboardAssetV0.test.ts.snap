@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Asset Dashboard data validation validates failing data against the schema 1`] = `
+exports[`Asset Dashboard data validation > validates failing data against the schema 1`] = `
 [
   {
     "instancePath": "/layout/0",

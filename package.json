@@ -8,19 +8,14 @@
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "commander": "^14.0.3",
-    "jest": "^30.3.0",
-    "jest-json-schema": "^6.1.0",
     "tsx": "^4.21.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
   },
+  "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "generate-schemas": "npx tsx ./tools/gen-plantmanager-schemas.ts"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "testMatch": [
-      "<rootDir>/tests/**/*.test.js"
-    ]
   }
 }
