@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/reading-identifier-dto.schema.json",
+  "title": "ReadingIdentifierDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "cmlId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "activitySurveyId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

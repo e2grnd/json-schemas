@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/create-tree-item-base-dto.schema.json",
+  "title": "CreateTreeItemBaseDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parentId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

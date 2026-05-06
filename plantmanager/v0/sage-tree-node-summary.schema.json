@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-tree-node-summary.schema.json",
+  "title": "SageTreeNodeSummary",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "sageTreeType": {
+      "enum": [
+        "Folder",
+        "Module",
+        "Attachment",
+        "RootUser",
+        "RootAsset"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Folder": 1,
+        "Module": 2,
+        "Attachment": 3,
+        "RootUser": 4,
+        "RootAsset": 5
+      }
+    }
+  }
+}

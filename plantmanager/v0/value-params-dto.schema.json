@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/value-params-dto.schema.json",
+  "title": "ValueParamsDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "lookupType": {
+      "enum": [
+        "StandardTube",
+        "MaterialGroups"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "StandardTube": 1,
+        "MaterialGroups": 2
+      }
+    },
+    "keywordName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "unitSystem": {
+      "enum": [
+        "English",
+        "Metric"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "English": 0,
+        "Metric": 1
+      }
+    }
+  }
+}

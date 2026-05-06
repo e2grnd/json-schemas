@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/calculated-external-rate-dto.schema.json",
+  "title": "CalculatedExternalRateDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "componentLinkedDataDtos": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "componentTypeId": {
+            "enum": [
+              "UNKNOWN",
+              "PIPE",
+              "ELBOW",
+              "FITTING",
+              "HEAD",
+              "SHELL",
+              "NOZZLE",
+              "PLATE",
+              "BOILER_TUBE",
+              "FLOOR",
+              "ROOF",
+              "RISER",
+              "PLUG",
+              "TUBE",
+              "COURSE",
+              "ANNULAR_PLATE",
+              "HEADER_BOX",
+              "OTHER"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "UNKNOWN": 0,
+              "PIPE": 1,
+              "ELBOW": 2,
+              "FITTING": 3,
+              "HEAD": 4,
+              "SHELL": 5,
+              "NOZZLE": 6,
+              "PLATE": 7,
+              "BOILER_TUBE": 8,
+              "FLOOR": 9,
+              "ROOF": 10,
+              "RISER": 11,
+              "PLUG": 12,
+              "TUBE": 13,
+              "COURSE": 14,
+              "ANNULAR_PLATE": 15,
+              "HEADER_BOX": 16,
+              "OTHER": 17
+            }
+          },
+          "unsGroup": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "unsSubGroup": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "commonName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "liningType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "insulationType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "operatingTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalEnvironment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uom": {
+      "enum": [
+        "English",
+        "Metric"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "English": 0,
+        "Metric": 1
+      }
+    }
+  }
+}

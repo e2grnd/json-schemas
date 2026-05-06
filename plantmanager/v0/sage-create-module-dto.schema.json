@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-create-module-dto.schema.json",
+  "title": "SageCreateModuleDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "module": {
+      "maxLength": 32,
+      "minLength": 0,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "maxLength": 16,
+      "minLength": 0,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitOfMeasure": {
+      "enum": [
+        "English",
+        "Metric"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "English": 0,
+        "Metric": 1
+      }
+    }
+  }
+}

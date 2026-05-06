@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/cml-default-values-from-component.schema.json",
+  "title": "CmlDefaultValuesFromComponent",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "componentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "inServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "circuitId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "insulationType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/damage-monitoring-location-damage-locations.schema.json",
+  "title": "DamageMonitoringLocationDamageLocations",
+  "type": "string",
+  "enum": [
+    "External",
+    "Internal"
+  ],
+  "x-enum-map": {
+    "External": 1,
+    "Internal": 2
+  }
+}

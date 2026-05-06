@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/header-box-plate-type.schema.json",
+  "title": "HeaderBoxPlateType",
+  "type": "string",
+  "enum": [
+    "Top",
+    "Side",
+    "End"
+  ],
+  "x-enum-map": {
+    "Top": 1,
+    "Side": 2,
+    "End": 3
+  }
+}

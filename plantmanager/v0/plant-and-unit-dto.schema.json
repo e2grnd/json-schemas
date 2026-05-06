@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/plant-and-unit-dto.schema.json",
+  "title": "PlantAndUnitDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "plantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    }
+  }
+}

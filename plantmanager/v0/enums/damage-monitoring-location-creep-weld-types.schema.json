@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/damage-monitoring-location-creep-weld-types.schema.json",
+  "title": "DamageMonitoringLocationCreepWeldTypes",
+  "type": "string",
+  "enum": [
+    "None",
+    "Longitudinal",
+    "Circumferential",
+    "BothDirections"
+  ],
+  "x-enum-map": {
+    "None": 1,
+    "Longitudinal": 2,
+    "Circumferential": 3,
+    "BothDirections": 4
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/reading-with-temperature-correction-dto.schema.json",
+  "title": "ReadingWithTemperatureCorrectionDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "thickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thicknessComment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "origMeasThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "inspectionMethod": {
+      "enum": [
+        "UNKOWN",
+        "UT",
+        "RT",
+        "N",
+        "I",
+        "S",
+        "H",
+        "D",
+        "C",
+        "P",
+        "V",
+        "Y",
+        "M"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "UNKOWN": 0,
+        "UT": 1,
+        "RT": 2,
+        "N": 3,
+        "I": 4,
+        "S": 5,
+        "H": 6,
+        "D": 7,
+        "C": 8,
+        "P": 9,
+        "V": 10,
+        "Y": 11,
+        "M": 12
+      }
+    },
+    "isBaseline": {
+      "type": "boolean"
+    },
+    "surveyId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "excludeFromCalculation": {
+      "type": "boolean"
+    },
+    "cmlId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "temperatureCorrection": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  }
+}

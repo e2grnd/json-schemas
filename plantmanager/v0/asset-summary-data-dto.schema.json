@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/asset-summary-data-dto.schema.json",
+  "title": "AssetSummaryDataDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetDescription": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "designPressure": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "designTemperature": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operatingPressure": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operatingTemperature": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "insulated": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fluidStream": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "highestSF": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meanLongRate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meanShortRate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "b90LongRate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "b90ShortRate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-use-example-case-dto.schema.json",
+  "title": "SageUseExampleCaseDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "moduleName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "exampleName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

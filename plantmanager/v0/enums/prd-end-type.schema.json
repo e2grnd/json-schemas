@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/prd-end-type.schema.json",
+  "title": "PrdEndType",
+  "type": "string",
+  "enum": [
+    "FlatFace",
+    "RaisedFace",
+    "RingJoint",
+    "ConeRing",
+    "Threaded"
+  ],
+  "x-enum-map": {
+    "FlatFace": 1,
+    "RaisedFace": 2,
+    "RingJoint": 3,
+    "ConeRing": 4,
+    "Threaded": 5
+  }
+}

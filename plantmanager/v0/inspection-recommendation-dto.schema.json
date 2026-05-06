@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/inspection-recommendation-dto.schema.json",
+  "title": "InspectionRecommendationDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "grade": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "D": 4,
+        "E": 5
+      }
+    },
+    "intrusive": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nonIntrusive": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

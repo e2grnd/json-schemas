@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/activity-type-dto.schema.json",
+  "title": "ActivityTypeDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "template": {
+      "enum": [
+        "Generic",
+        "Survey",
+        "Inspection"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Generic": 1,
+        "Survey": 2,
+        "Inspection": 3
+      }
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetsUsing": {
+      "type": "boolean"
+    },
+    "maximumInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "halfLife": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "rbiThinning": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "rbiExternal": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "rbiCracking": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "includeOnNewPlants": {
+      "type": "boolean"
+    },
+    "assetTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "AirCooler",
+          "Boiler",
+          "Compressor",
+          "FiredHeater",
+          "HorizontalVessel",
+          "PipingSystem",
+          "PressureReliefDevice",
+          "Pump",
+          "ShellTubeHeatExchanger",
+          "Sphere",
+          "StorageTank",
+          "VerticalVessel",
+          "Other"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "AirCooler": 1,
+          "Boiler": 2,
+          "Compressor": 3,
+          "FiredHeater": 4,
+          "HorizontalVessel": 5,
+          "PipingSystem": 6,
+          "PressureReliefDevice": 7,
+          "Pump": 8,
+          "ShellTubeHeatExchanger": 9,
+          "Sphere": 10,
+          "StorageTank": 11,
+          "VerticalVessel": 12,
+          "Other": 13
+        }
+      }
+    },
+    "apiServiceClasses": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "Class1",
+          "Class2",
+          "Class3",
+          "Class4",
+          "Unknown"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "Class1": 1,
+          "Class2": 2,
+          "Class3": 3,
+          "Class4": 4,
+          "Unknown": 5
+        }
+      }
+    },
+    "plantIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    }
+  }
+}

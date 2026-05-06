@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/joint-assembly-report-dto.schema.json",
+  "title": "JointAssemblyReportDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "thirtyPercentTorque": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sixtyPercentTorque": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "oneHundredPercentTorque": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assemblyName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lubricant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "baseFlangeGasketType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "matingFlangeGasketType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boltingQuantity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boltingNominalDiameter": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boltingStudMaterial": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boltingNutMaterial": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boltingStudLength": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jointFlangeInsulation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jointNutFactor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "minimumRequiredBoltStress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maximumAllowableBoltStress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "targetBoltStress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boltTighteningPattern": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boltTighteningPatternDesc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pass1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pass2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pass3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pass4": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pass5": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assemblyNote": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "moduleName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "damageCriteriaSatisfied": {
+      "type": "boolean"
+    },
+    "damagePassFailMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "leakageCriteriaSatisfied": {
+      "type": "boolean"
+    },
+    "leakagePassFailMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

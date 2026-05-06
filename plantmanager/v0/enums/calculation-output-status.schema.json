@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/calculation-output-status.schema.json",
+  "title": "CalculationOutputStatus",
+  "type": "string",
+  "enum": [
+    "New",
+    "Calculated",
+    "Warning",
+    "Error",
+    "Stale",
+    "NewVersion"
+  ],
+  "x-enum-map": {
+    "New": 0,
+    "Calculated": 1,
+    "Warning": 2,
+    "Error": 3,
+    "Stale": 4,
+    "NewVersion": 5
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/comment-update-dto.schema.json",
+  "title": "CommentUpdateDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "comment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updateType": {
+      "enum": [
+        "Add",
+        "Update",
+        "Delete"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Add": 1,
+        "Update": 2,
+        "Delete": 3
+      }
+    }
+  }
+}

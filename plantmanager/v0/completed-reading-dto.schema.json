@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/completed-reading-dto.schema.json",
+  "title": "CompletedReadingDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "plant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitSystem": {
+      "enum": [
+        "English",
+        "Metric"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "English": 0,
+        "Metric": 1
+      }
+    },
+    "unit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetType": {
+      "enum": [
+        "AirCooler",
+        "Boiler",
+        "Compressor",
+        "FiredHeater",
+        "HorizontalVessel",
+        "PipingSystem",
+        "PressureReliefDevice",
+        "Pump",
+        "ShellTubeHeatExchanger",
+        "Sphere",
+        "StorageTank",
+        "VerticalVessel",
+        "Other"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "AirCooler": 1,
+        "Boiler": 2,
+        "Compressor": 3,
+        "FiredHeater": 4,
+        "HorizontalVessel": 5,
+        "PipingSystem": 6,
+        "PressureReliefDevice": 7,
+        "Pump": 8,
+        "ShellTubeHeatExchanger": 9,
+        "Sphere": 10,
+        "StorageTank": 11,
+        "VerticalVessel": 12,
+        "Other": 13
+      }
+    },
+    "serviceStatus": {
+      "enum": [
+        "InService",
+        "OutOfService",
+        "Decommissioned"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "InService": 1,
+        "OutOfService": 2,
+        "Decommissioned": 3
+      }
+    },
+    "cmlName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cmlLineNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "useMawpApproach": {
+      "type": "boolean"
+    },
+    "minimumThickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "surveyDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "thickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "thicknessUnits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nextInspectionDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "inspectors": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "compName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "groupNames": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "cmlId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "activityItemId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

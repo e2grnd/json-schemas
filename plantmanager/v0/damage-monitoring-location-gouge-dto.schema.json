@@ -1,0 +1,205 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-gouge-dto.schema.json",
+  "title": "DamageMonitoringLocationGougeDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "type": {
+      "enum": [
+        "LocalThinArea",
+        "GeneralThinning",
+        "Cracking",
+        "Pitting",
+        "Creep",
+        "Dent",
+        "Gouge"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "LocalThinArea": 1,
+        "GeneralThinning": 2,
+        "Cracking": 3,
+        "Pitting": 4,
+        "Creep": 5,
+        "Dent": 6,
+        "Gouge": 7
+      }
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "New",
+        "DataCollection",
+        "Review",
+        "Recommendation",
+        "Resolved"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "New": 1,
+        "DataCollection": 2,
+        "Review": 3,
+        "Recommendation": 4,
+        "Resolved": 5
+      }
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "findingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "fileId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "fileName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "grid": {
+      "type": "object",
+      "properties": {
+        "fileName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "data": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {}
+        }
+      },
+      "additionalProperties": false
+    },
+    "reportFileId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "evaluationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "hasCalculationErrors": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "defaultProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "lastSaved": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "damageMonitoringLocationId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "assessmentLevel": {
+      "enum": [
+        "Level1",
+        "Level2"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Level1": 1,
+        "Level2": 2
+      }
+    },
+    "damageLocation": {
+      "enum": [
+        "External",
+        "Internal"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "External": 1,
+        "Internal": 2
+      }
+    },
+    "undamagedRegionFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedRegionFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "undamagedRegionCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedRegionCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  }
+}

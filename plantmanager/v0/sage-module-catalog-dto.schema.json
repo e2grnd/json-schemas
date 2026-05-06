@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-module-catalog-dto.schema.json",
+  "title": "SageModuleCatalogDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "commonName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "areas": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "validChildren": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userTypeLimit": {
+      "enum": [
+        "Apprentice",
+        "Practitioner",
+        "Master"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Apprentice": 1,
+        "Practitioner": 2,
+        "Master": 3
+      }
+    },
+    "root": {
+      "type": "boolean"
+    },
+    "licensed": {
+      "type": "boolean"
+    },
+    "validVersions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

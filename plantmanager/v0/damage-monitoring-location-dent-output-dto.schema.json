@@ -1,0 +1,233 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-dent-output-dto.schema.json",
+  "title": "DamageMonitoringLocationDentOutputDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "damageMonitoringLocationId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "statusMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assessmentLevel": {
+      "enum": [
+        "Level1",
+        "Level2"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Level1": 1,
+        "Level2": 2
+      }
+    },
+    "materialYieldStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumYieldStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "materialTensileStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumTensileStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shellOutsideDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumOutsideDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumOutsideDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "currentThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumCurrentThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumCurrentThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "diameterToThicknessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumDotRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumDotRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "dentRadius": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumDentRadius": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "corrodedMinimumMeasuredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thicknessLimitStructural": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pressurizedDentDepth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumAllowableDentDepth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "gougeDepth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumAllowableGougeDepth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "gougeDepthToThicknessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumGougeDepthRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "designPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "undamagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "dentGougeAssessmentMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "dentGougeApplicabilityAndLimitationsMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

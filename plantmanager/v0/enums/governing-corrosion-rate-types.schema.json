@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/governing-corrosion-rate-types.schema.json",
+  "title": "GoverningCorrosionRateTypes",
+  "type": "string",
+  "enum": [
+    "LongRate",
+    "ShortRate",
+    "BestFitRate",
+    "ScraLongRate",
+    "ScraShortRate",
+    "ScraStatShortRate",
+    "ScraStatLongRate",
+    "EstimatedRate"
+  ],
+  "x-enum-map": {
+    "LongRate": 1,
+    "ShortRate": 2,
+    "BestFitRate": 3,
+    "ScraLongRate": 4,
+    "ScraShortRate": 5,
+    "ScraStatShortRate": 6,
+    "ScraStatLongRate": 7,
+    "EstimatedRate": 8
+  }
+}

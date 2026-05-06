@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/hierarchy-permissions-tree-dto.schema.json",
+  "title": "HierarchyPermissionsTreeDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userCanEdit": {
+      "type": "boolean"
+    },
+    "canEdit": {
+      "type": "boolean"
+    },
+    "canEditIndeterminate": {
+      "type": "boolean"
+    },
+    "isAdmin": {
+      "type": "boolean"
+    },
+    "isAdminIndeterminate": {
+      "type": "boolean"
+    },
+    "defaultEdit": {
+      "type": "boolean"
+    },
+    "defaultEditIndeterminate": {
+      "type": "boolean"
+    },
+    "defaultAdmin": {
+      "type": "boolean"
+    },
+    "defaultAdminIndeterminate": {
+      "type": "boolean"
+    }
+  }
+}

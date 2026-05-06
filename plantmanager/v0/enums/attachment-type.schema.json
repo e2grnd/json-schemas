@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/attachment-type.schema.json",
+  "title": "AttachmentType",
+  "type": "string",
+  "enum": [
+    "Folder",
+    "File"
+  ],
+  "x-enum-map": {
+    "Folder": 1,
+    "File": 2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v0/webhook.test.schema.json",
+  "title": "webhook.test data",
+  "description": "Data payload for the webhook.test event, sent when a subscriber manually triggers a test delivery to verify their endpoint is reachable.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["subscriptionId"],
+  "properties": {
+    "subscriptionId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID of the webhook subscription being tested."
+    },
+    "message": {
+      "type": "string",
+      "default": "This is a test event",
+      "description": "Test payload message."
+    }
+  }
+}

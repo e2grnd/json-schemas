@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/sage-user-types.schema.json",
+  "title": "SageUserTypes",
+  "type": "string",
+  "enum": [
+    "Apprentice",
+    "Practitioner",
+    "Master"
+  ],
+  "x-enum-map": {
+    "Apprentice": 1,
+    "Practitioner": 2,
+    "Master": 3
+  }
+}

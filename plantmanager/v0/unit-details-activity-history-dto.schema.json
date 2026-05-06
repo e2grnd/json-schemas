@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/unit-details-activity-history-dto.schema.json",
+  "title": "UnitDetailsActivityHistoryDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "template": {
+      "enum": [
+        "Generic",
+        "Survey",
+        "Inspection"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Generic": 1,
+        "Survey": 2,
+        "Inspection": 3
+      }
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "activityTypeId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "activityType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectorNames": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "componentName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

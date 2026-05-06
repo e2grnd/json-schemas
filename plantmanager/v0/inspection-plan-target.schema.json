@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/inspection-plan-target.schema.json",
+  "title": "InspectionPlanTarget",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "value": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  }
+}

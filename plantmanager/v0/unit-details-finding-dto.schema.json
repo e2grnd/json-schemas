@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/unit-details-finding-dto.schema.json",
+  "title": "UnitDetailsFindingDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tenantKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recommendedCorrectiveAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "componentName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "codeReference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "priority": {
+      "enum": [
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "Seven",
+        "Eight",
+        "Nine",
+        "Ten"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "One": 1,
+        "Two": 2,
+        "Three": 3,
+        "Four": 4,
+        "Five": 5,
+        "Six": 6,
+        "Seven": 7,
+        "Eight": 8,
+        "Nine": 9,
+        "Ten": 10
+      }
+    },
+    "activityId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "activityName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maintenanceReference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "New",
+        "Assigned",
+        "InProgress",
+        "ClosedNotComplete",
+        "ClosedComplete"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "New": 1,
+        "Assigned": 2,
+        "InProgress": 3,
+        "ClosedNotComplete": 4,
+        "ClosedComplete": 5
+      }
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

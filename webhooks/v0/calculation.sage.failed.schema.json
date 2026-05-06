@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.sage.failed.schema.json",
+  "title": "calculation.sage.failed data",
+  "description": "Data payload for the calculation.sage.failed event. Models CalcResult.Error from activitycontracts alongside standard traceability fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["jobId", "tenantKey", "calcType"],
+  "properties": {
+    "jobId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUIDv7 job identifier; also the Temporal workflow ID."
+    },
+    "tenantKey": {
+      "type": "string",
+      "description": "Tenant identifier of the submitting organization."
+    },
+    "calcType": {
+      "type": "string",
+      "enum": ["sage"],
+      "description": "Calculator type. Always 'sage' for this event."
+    },
+    "calcName": {
+      "type": "string",
+      "description": "Optional human-readable calculation name supplied at submission."
+    },
+    "failedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp when the failure was recorded."
+    },
+    "errorCode": {
+      "type": "string",
+      "description": "Machine-readable error code (e.g. 'TIMEOUT', 'WORKER_PANIC', 'SAGE_API_ERROR')."
+    },
+    "errorMessage": {
+      "type": "string",
+      "description": "Human-readable failure description, sourced from CalcResult.Error."
+    }
+  }
+}

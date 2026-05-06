@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/view-direction.schema.json",
+  "title": "ViewDirection",
+  "type": "string",
+  "enum": [
+    "Top",
+    "XSide",
+    "YSide",
+    "Skew"
+  ],
+  "x-enum-map": {
+    "Top": 0,
+    "XSide": 1,
+    "YSide": 2,
+    "Skew": 3
+  }
+}

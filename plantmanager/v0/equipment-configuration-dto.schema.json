@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/equipment-configuration-dto.schema.json",
+  "title": "EquipmentConfigurationDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "maximumInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "halfLife": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isLongRateGoverning": {
+      "type": "boolean"
+    },
+    "isShortRateGoverning": {
+      "type": "boolean"
+    },
+    "isLinearRateGoverning": {
+      "type": "boolean"
+    },
+    "isScraMeasuredLongRateGoverning": {
+      "type": "boolean"
+    },
+    "isScraMeasuredShortRateGoverning": {
+      "type": "boolean"
+    },
+    "isScraStatisticalLongRateGoverning": {
+      "type": "boolean"
+    },
+    "isScraStatisticalShortRateGoverning": {
+      "type": "boolean"
+    },
+    "isEstimatedCorrosionRate": {
+      "type": "boolean"
+    },
+    "estimatedCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "establishingCorrosionRateType": {
+      "enum": [
+        "ProbableRate",
+        "TimeInterval"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "ProbableRate": 1,
+        "TimeInterval": 2
+      }
+    },
+    "establishingProbableRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "establishingTimeInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "useMawpApproach": {
+      "type": "boolean"
+    },
+    "isRetirementThickness": {
+      "type": "boolean"
+    },
+    "isStructuralRequiredThickness": {
+      "type": "boolean"
+    },
+    "isCorrodedThickness": {
+      "type": "boolean"
+    },
+    "isSpecifiedThickness": {
+      "type": "boolean"
+    },
+    "specifiedMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "rbi": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "hasSurveyTempCorrections": {
+      "type": "boolean"
+    },
+    "isNominalInRateCalc": {
+      "type": "boolean"
+    },
+    "defaultProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

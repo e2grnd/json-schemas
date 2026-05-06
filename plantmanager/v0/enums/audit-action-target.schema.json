@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/audit-action-target.schema.json",
+  "title": "AuditActionTarget",
+  "type": "string",
+  "enum": [
+    "Plant",
+    "Unit",
+    "Asset",
+    "Cml",
+    "Component",
+    "Circuit",
+    "Activity",
+    "Inspector",
+    "ActivityType",
+    "Reading",
+    "Finding",
+    "FluidStream",
+    "DamageMonitoringLocation",
+    "ActivityHistoryItem"
+  ],
+  "x-enum-map": {
+    "Plant": 0,
+    "Unit": 1,
+    "Asset": 2,
+    "Cml": 3,
+    "Component": 4,
+    "Circuit": 5,
+    "Activity": 6,
+    "Inspector": 7,
+    "ActivityType": 8,
+    "Reading": 9,
+    "Finding": 10,
+    "FluidStream": 11,
+    "DamageMonitoringLocation": 12,
+    "ActivityHistoryItem": 13
+  }
+}

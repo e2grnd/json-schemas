@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/legend-placement-vertical.schema.json",
+  "title": "LegendPlacementVertical",
+  "type": "string",
+  "enum": [
+    "TopOutside",
+    "Top",
+    "Center",
+    "Bottom",
+    "BottomOutside"
+  ],
+  "x-enum-map": {
+    "TopOutside": 0,
+    "Top": 1,
+    "Center": 2,
+    "Bottom": 3,
+    "BottomOutside": 4
+  }
+}

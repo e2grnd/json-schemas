@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/chart-display-options-surface-scalar.schema.json",
+  "title": "ChartDisplayOptionsSurfaceScalar",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visible": {
+      "type": "boolean"
+    }
+  }
+}

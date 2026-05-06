@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/export-group-dto.schema.json",
+  "title": "ExportGroupDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "plantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operatingPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "operatingTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "estimatedCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "drawingName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fluidStreamId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tenantKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "circuitId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "primaryAssetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "unitId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "fluidStreamName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

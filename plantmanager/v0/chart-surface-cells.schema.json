@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/chart-surface-cells.schema.json",
+  "title": "ChartSurfaceCells",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [
+        "Quadrilateral",
+        "Triangle",
+        "Functional"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Quadrilateral": 0,
+        "Triangle": 1,
+        "Functional": 2
+      }
+    },
+    "pointIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  }
+}

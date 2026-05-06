@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/risk-matrix-pof-category-dto.schema.json",
+  "title": "RiskMatrixPofCategoryDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "pofCategory": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "pofLowerThreshold": {
+      "type": "number",
+      "format": "double"
+    },
+    "pofUpperThreshold": {
+      "type": "number",
+      "format": "double"
+    }
+  }
+}

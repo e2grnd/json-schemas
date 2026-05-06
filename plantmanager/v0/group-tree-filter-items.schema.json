@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/group-tree-filter-items.schema.json",
+  "title": "GroupTreeFilterItems",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "groupIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    }
+  }
+}

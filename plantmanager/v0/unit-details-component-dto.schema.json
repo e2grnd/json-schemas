@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/unit-details-component-dto.schema.json",
+  "title": "UnitDetailsComponentDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rbi": {
+      "type": "boolean"
+    },
+    "riskCategory": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "riskColor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "size": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nominalThickness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "corrosionAllowance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "minimumThickness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maximumAllowableWorkingPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "conditionMonitoringLocationsCount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "status": {
+      "enum": [
+        "Active",
+        "Disabled"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Active": 1,
+        "Disabled": 2
+      }
+    },
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

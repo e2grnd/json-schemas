@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-calculation-response-dto.schema.json",
+  "title": "DamageMonitoringLocationCalculationResponseDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "jobId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "success": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "errorMsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reportFileId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    }
+  }
+}

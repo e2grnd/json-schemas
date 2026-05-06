@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-cracking-output-dto.schema.json",
+  "title": "DamageMonitoringLocationCrackingOutputDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "damageMonitoringLocationId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "statusMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "primaryReferenceStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "yieldStrength": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "primaryLoadRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalCrackTipSifPhiZero": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalCrackTipSifPhiNinety": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "materialToughness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumToughnessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "allowableLoadRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "allowableToughnessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "plasticCollapseMargin": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "brittleFractureMargin": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumCrackDepth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumCrackLength": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackDepthMargin": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackLengthMargin": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "failureAssessmentDiagramMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "crackSensitivityMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "crackLikeFlawApplicabilityAndLimitationsMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

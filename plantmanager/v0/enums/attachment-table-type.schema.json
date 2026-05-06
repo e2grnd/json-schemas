@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/attachment-table-type.schema.json",
+  "title": "AttachmentTableType",
+  "type": "string",
+  "enum": [
+    "ActivityItem",
+    "ActivityFuturePlanning",
+    "ActivityFutureInProgress",
+    "Asset",
+    "Cml",
+    "Findings",
+    "SageModule",
+    "Unit",
+    "SageTreeAttachments"
+  ],
+  "x-enum-map": {
+    "ActivityItem": 1,
+    "ActivityFuturePlanning": 2,
+    "ActivityFutureInProgress": 3,
+    "Asset": 4,
+    "Cml": 5,
+    "Findings": 6,
+    "SageModule": 7,
+    "Unit": 8,
+    "SageTreeAttachments": 9
+  }
+}

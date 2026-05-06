@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/pit-couple.schema.json",
+  "title": "PitCouple",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "pitCouplePitch": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pitAngle": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pitOneDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pitOneDepth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pitTwoDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pitTwoDepth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  }
+}

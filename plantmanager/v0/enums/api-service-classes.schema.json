@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/api-service-classes.schema.json",
+  "title": "ApiServiceClasses",
+  "type": "string",
+  "enum": [
+    "Class1",
+    "Class2",
+    "Class3",
+    "Class4",
+    "Unknown"
+  ],
+  "x-enum-map": {
+    "Class1": 1,
+    "Class2": 2,
+    "Class3": 3,
+    "Class4": 4,
+    "Unknown": 5
+  }
+}

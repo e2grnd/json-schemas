@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/series-data-line.schema.json",
+  "title": "SeriesDataLine",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "defaultConfig": {
+      "type": "object",
+      "properties": {
+        "visible": {
+          "type": "boolean"
+        },
+        "showInLegend": {
+          "type": "boolean"
+        },
+        "color": {
+          "type": "object",
+          "properties": {
+            "r": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "g": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "b": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "a": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "isKnownColor": {
+              "type": "boolean"
+            },
+            "isEmpty": {
+              "type": "boolean"
+            },
+            "isNamedColor": {
+              "type": "boolean"
+            },
+            "isSystemColor": {
+              "type": "boolean"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "seriesType": {
+          "enum": [
+            "Point",
+            "Line",
+            "PointArea",
+            "LineArea"
+          ],
+          "type": "string",
+          "x-enum-map": {
+            "Point": 0,
+            "Line": 1,
+            "PointArea": 2,
+            "LineArea": 3
+          }
+        },
+        "markerShape": {
+          "enum": [
+            "Circle",
+            "None",
+            "Hexagon",
+            "InverseTriangle",
+            "Pentagon",
+            "Square",
+            "Star",
+            "7",
+            "-1"
+          ],
+          "type": "string",
+          "x-enum-map": {
+            "Circle": 0,
+            "None": 1,
+            "Hexagon": 2,
+            "InverseTriangle": 3,
+            "Pentagon": 4,
+            "Square": 5,
+            "Star": 6
+          }
+        },
+        "markerSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "markersVisible": {
+          "type": "boolean"
+        },
+        "lineThickness": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lineStyle": {
+          "enum": [
+            "Dashed",
+            "DotDashed",
+            "Dotted",
+            "Solid"
+          ],
+          "type": "string",
+          "x-enum-map": {
+            "Dashed": 0,
+            "DotDashed": 1,
+            "Dotted": 2,
+            "Solid": 3
+          }
+        },
+        "smooth": {
+          "type": "boolean"
+        },
+        "fillTitle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fillDirection": {
+          "enum": [
+            "Up",
+            "Down"
+          ],
+          "type": "string",
+          "x-enum-map": {
+            "Up": 0,
+            "Down": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "points": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "format": "double"
+          },
+          "y": {
+            "type": "number",
+            "format": "double"
+          },
+          "z": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "minX": {
+      "type": "number",
+      "format": "double"
+    },
+    "maxX": {
+      "type": "number",
+      "format": "double"
+    },
+    "minY": {
+      "type": "number",
+      "format": "double"
+    },
+    "maxY": {
+      "type": "number",
+      "format": "double"
+    },
+    "minZ": {
+      "type": "number",
+      "format": "double"
+    },
+    "maxZ": {
+      "type": "number",
+      "format": "double"
+    }
+  }
+}

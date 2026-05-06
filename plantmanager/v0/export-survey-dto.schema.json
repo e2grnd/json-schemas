@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/export-survey-dto.schema.json",
+  "title": "ExportSurveyDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "surveyId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "activityType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "inspectors": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "instrumentId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instrumentModel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transducerId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transducerModel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "campaign": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cmlName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "inspectionMethod": {
+      "enum": [
+        "UNKOWN",
+        "UT",
+        "RT",
+        "N",
+        "I",
+        "S",
+        "H",
+        "D",
+        "C",
+        "P",
+        "V",
+        "Y",
+        "M"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "UNKOWN": 0,
+        "UT": 1,
+        "RT": 2,
+        "N": 3,
+        "I": 4,
+        "S": 5,
+        "H": 6,
+        "D": 7,
+        "C": 8,
+        "P": 9,
+        "V": 10,
+        "Y": 11,
+        "M": 12
+      }
+    },
+    "excludeThickness": {
+      "type": "boolean"
+    },
+    "instrumentManufacturerCalibrationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "calibrationBlockMaterial": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "calibrationBlockId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "calibrationBlockThickness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

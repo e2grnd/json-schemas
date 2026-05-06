@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/circuit-dto.schema.json",
+  "title": "CircuitDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "defaultProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "unitId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "primaryAssetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operatingPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "operatingTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "estimatedCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "estimatedExternalCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "drawingName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fluidStreamId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "cmlIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "assetIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "damageMechanismId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "internalThinningType": {
+      "enum": [
+        "General",
+        "Local"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "General": 1,
+        "Local": 2
+      }
+    },
+    "thinningDamageMechanisms": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "equipmentLining": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "externalEnvironment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitExternalEnvironment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "estimatedExternalCrackingSusceptibility": {
+      "enum": [
+        "None",
+        "VeryLow",
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "None": 1,
+        "VeryLow": 2,
+        "Low": 3,
+        "Medium": 4,
+        "High": 5
+      }
+    },
+    "calculatedExternalCrackingSusceptibility": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "externalCrackingSusceptibilityBasis": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "externalCorrosionRateBasis": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "crackingMechanisms": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/available-report.schema.json",
+  "title": "AvailableReport",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reportFileName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "modeId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

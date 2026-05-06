@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/due-date-report-below-retirements.schema.json",
+  "title": "DueDateReportBelowRetirements",
+  "type": "string",
+  "enum": [
+    "Include",
+    "Omit",
+    "BelowRetirementOnly"
+  ],
+  "x-enum-map": {
+    "Include": 1,
+    "Omit": 2,
+    "BelowRetirementOnly": 3
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/import-attachment-dto.schema.json",
+  "title": "ImportAttachmentDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "foreignKey": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "fileContent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "byte"
+    },
+    "fileId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "fileName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fileType": {
+      "enum": [
+        "UNKNOWN",
+        "PDF",
+        "IMAGE",
+        "TEXT"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "UNKNOWN": 0,
+        "PDF": 1,
+        "IMAGE": 2,
+        "TEXT": 3
+      }
+    },
+    "canPreview": {
+      "type": "boolean"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "parentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "attachmentType": {
+      "enum": [
+        "Folder",
+        "File"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Folder": 1,
+        "File": 2
+      }
+    },
+    "hasChildren": {
+      "type": "boolean"
+    },
+    "blobId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tableType": {
+      "enum": [
+        "ActivityItem",
+        "ActivityFuturePlanning",
+        "ActivityFutureInProgress",
+        "Asset",
+        "Cml",
+        "Findings",
+        "SageModule",
+        "Unit",
+        "SageTreeAttachments"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "ActivityItem": 1,
+        "ActivityFuturePlanning": 2,
+        "ActivityFutureInProgress": 3,
+        "Asset": 4,
+        "Cml": 5,
+        "Findings": 6,
+        "SageModule": 7,
+        "Unit": 8,
+        "SageTreeAttachments": 9
+      }
+    }
+  }
+}

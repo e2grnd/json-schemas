@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/version-dto.schema.json",
+  "title": "VersionDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "major": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "minor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "build": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}

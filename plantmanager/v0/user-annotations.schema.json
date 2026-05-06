@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/user-annotations.schema.json",
+  "title": "UserAnnotations",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "keyword": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "col": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "row": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "table": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "flag": {
+      "enum": [
+        "None",
+        "Assumption",
+        "Default",
+        "NeedsReview",
+        "Suspect",
+        "CheckUnits"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "None": 0,
+        "Assumption": 1,
+        "Default": 2,
+        "NeedsReview": 3,
+        "Suspect": 4,
+        "CheckUnits": 5
+      }
+    },
+    "comment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "defaultChange": {
+      "type": "object",
+      "properties": {
+        "fromVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "toVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fromValue": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "toValue": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

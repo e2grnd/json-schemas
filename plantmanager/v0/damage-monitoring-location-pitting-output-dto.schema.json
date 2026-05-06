@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-pitting-output-dto.schema.json",
+  "title": "DamageMonitoringLocationPittingOutputDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "damageMonitoringLocationId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "statusMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "corrodedMinimumMeasuredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thicknessLimitStructural": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "remainingThicknessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumRemainingThicknessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumPitDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumAllowablePitDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "designPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "undamagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pittingAssessmentMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "pittingApplicabilityAndLimitationsMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/unit-details-dto.schema.json",
+  "title": "UnitDetailsDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "plantId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "processDescription": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "turnaroundDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "subsequentTurnaroundDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "criticalCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "api581Edition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "consequenceModel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "managementFactorQuestionnaire": {
+      "type": "boolean"
+    },
+    "managementScore": {
+      "type": "number",
+      "format": "double"
+    },
+    "managementFactor": {
+      "type": "number",
+      "format": "double"
+    },
+    "externalEnvironment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "populationDensity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "injuryCost": {
+      "type": "number",
+      "format": "double"
+    },
+    "environmentCost": {
+      "type": "number",
+      "format": "double"
+    },
+    "affectedAreaCost": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "productionCost": {
+      "type": "number",
+      "format": "double"
+    },
+    "cofAreaLimitFlag": {
+      "type": "boolean"
+    },
+    "cofAreaLimit": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "rbiDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "planDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "thinningRequiredEffectiveness": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "D": 4,
+        "E": 5
+      }
+    },
+    "inspectionEffectivenessWindow": {
+      "type": "number",
+      "format": "double"
+    },
+    "damageFactorTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "damageFactorTargetFlag": {
+      "type": "boolean"
+    },
+    "areaRiskTarget": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "areaRiskTargetFlag": {
+      "type": "boolean"
+    },
+    "financialRiskTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "financialRiskTargetFlag": {
+      "type": "boolean"
+    },
+    "pofTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "pofTargetFlag": {
+      "type": "boolean"
+    },
+    "pofatTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "pofatTargetFlag": {
+      "type": "boolean"
+    },
+    "minimumThicknessFlag": {
+      "type": "boolean"
+    },
+    "prdAssessmentLevel": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "includeLeakRisk": {
+      "type": "boolean"
+    },
+    "blockValveAdminControls": {
+      "type": "boolean"
+    },
+    "flareRecoverySystem": {
+      "type": "boolean"
+    },
+    "prdAreaRiskTarget": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "prdAreaRiskTargetFlag": {
+      "type": "boolean"
+    },
+    "prdFinancialRiskTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "prdFinancialRiskTargetFlag": {
+      "type": "boolean"
+    },
+    "prdPofodTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "prdPofodTargetFlag": {
+      "type": "boolean"
+    },
+    "prdPolTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "prdPolTargetFlag": {
+      "type": "boolean"
+    },
+    "prdProbabilityOfFatalityTarget": {
+      "type": "number",
+      "format": "double"
+    },
+    "prdProbabilityOfFatalityTargetFlag": {
+      "type": "boolean"
+    },
+    "minimumInspectionInterval": {
+      "type": "number",
+      "format": "double"
+    },
+    "maximumInspectionInterval": {
+      "type": "number",
+      "format": "double"
+    },
+    "defaultProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "forcedProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

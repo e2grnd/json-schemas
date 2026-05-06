@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/cached-default.schema.json",
+  "title": "CachedDefault",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "keywordName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "column": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "clone": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "value": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

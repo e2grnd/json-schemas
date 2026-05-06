@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.eec.created.schema.json",
+  "title": "calculation.eec.created data",
+  "description": "Data payload for the calculation.eec.created event, emitted when an EEC calculation job is accepted and queued.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["jobId", "tenantKey", "calcType"],
+  "properties": {
+    "jobId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUIDv7 job identifier; also the Temporal workflow ID."
+    },
+    "tenantKey": {
+      "type": "string",
+      "description": "Tenant identifier of the submitting organization."
+    },
+    "calcType": {
+      "type": "string",
+      "enum": ["eec"],
+      "description": "Calculator type. Always 'eec' for this event."
+    },
+    "calcName": {
+      "type": "string",
+      "description": "Optional human-readable calculation name supplied at submission."
+    },
+    "submittedBy": {
+      "type": "string",
+      "description": "Identity of the submitter (e.g. API key label or user email)."
+    },
+    "submittedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp when the job was accepted."
+    }
+  }
+}

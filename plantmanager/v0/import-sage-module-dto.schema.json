@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/import-sage-module-dto.schema.json",
+  "title": "ImportSageModuleDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sageOwnerType": {
+      "enum": [
+        "Folder",
+        "Tree",
+        "Component",
+        "Asset"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Folder": 1,
+        "Tree": 2,
+        "Component": 3,
+        "Asset": 4
+      }
+    },
+    "parentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "serializedInputFile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "attachments": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "blobId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fileName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

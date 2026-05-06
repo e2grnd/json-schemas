@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/date-range-dto.schema.json",
+  "title": "DateRangeDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "start": {
+      "type": "string",
+      "format": "date"
+    },
+    "end": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

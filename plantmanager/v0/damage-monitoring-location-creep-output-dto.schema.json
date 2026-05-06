@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-creep-output-dto.schema.json",
+  "title": "DamageMonitoringLocationCreepOutputDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "damageMonitoringLocationId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "statusMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maximumTemperatureLimit": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumAdjustedTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thicknessLimitStructural": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumYieldSafetyFactor": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "creepDamageLimit": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "calculatedCreepDamage": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "creepAssessmentMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "creepApplicabilityAndLimitationsMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

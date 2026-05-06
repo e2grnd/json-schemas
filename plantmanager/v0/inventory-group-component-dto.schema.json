@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/inventory-group-component-dto.schema.json",
+  "title": "InventoryGroupComponentDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "componentTypeId": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "componentTypeName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fluidMass": {
+      "type": "number",
+      "format": "double"
+    },
+    "vaporVolume": {
+      "type": "number",
+      "format": "double"
+    },
+    "liquidVolume": {
+      "type": "number",
+      "format": "double"
+    },
+    "needsRbiRecalculation": {
+      "type": "boolean"
+    },
+    "inDifferentInventoryGroup": {
+      "type": "boolean"
+    }
+  }
+}

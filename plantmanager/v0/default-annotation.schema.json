@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/default-annotation.schema.json",
+  "title": "DefaultAnnotation",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "fromVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "toVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fromValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "toValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

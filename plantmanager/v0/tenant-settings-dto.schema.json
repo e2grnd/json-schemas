@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/tenant-settings-dto.schema.json",
+  "title": "TenantSettingsDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "hierarchyPermissionType": {
+      "enum": [
+        "None",
+        "User",
+        "ActiveDirectory"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "None": 0,
+        "User": 1,
+        "ActiveDirectory": 2
+      }
+    }
+  }
+}

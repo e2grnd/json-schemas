@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/due-date-report-thickness-cml-data-dto.schema.json",
+  "title": "DueDateReportThicknessCMLDataDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "cmlId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "plantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetTypeName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cmlName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "orientationName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "circuitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentTypeName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "size": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "minimumThickness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retirementDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastSurveyThickness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastSurveyDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nextInspectionDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectionDriver": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

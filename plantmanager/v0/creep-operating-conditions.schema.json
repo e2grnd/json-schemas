@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/creep-operating-conditions.schema.json",
+  "title": "CreepOperatingConditions",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "conditionDuration": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "temperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "pressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "innerDiameterCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "outerDiameterCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "axialForce": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "bendingMoment": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/tree-filter-items.schema.json",
+  "title": "TreeFilterItems",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "assetTypeIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "assetStatusIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  }
+}

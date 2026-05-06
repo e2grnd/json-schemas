@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/inspection-drivers.schema.json",
+  "title": "InspectionDrivers",
+  "type": "string",
+  "enum": [
+    "HalfLife",
+    "MaximumInterval",
+    "Specified"
+  ],
+  "x-enum-map": {
+    "HalfLife": 1,
+    "MaximumInterval": 2,
+    "Specified": 3
+  }
+}

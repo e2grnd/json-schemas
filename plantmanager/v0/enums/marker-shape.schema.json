@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/marker-shape.schema.json",
+  "title": "MarkerShape",
+  "type": "string",
+  "enum": [
+    "Circle",
+    "None",
+    "Hexagon",
+    "InverseTriangle",
+    "Pentagon",
+    "Square",
+    "Star",
+    "7",
+    "-1"
+  ],
+  "x-enum-map": {
+    "Circle": 0,
+    "None": 1,
+    "Hexagon": 2,
+    "InverseTriangle": 3,
+    "Pentagon": 4,
+    "Square": 5,
+    "Star": 6
+  }
+}

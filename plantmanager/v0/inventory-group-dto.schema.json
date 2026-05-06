@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/inventory-group-dto.schema.json",
+  "title": "InventoryGroupDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isolation": {
+      "enum": [
+        "C",
+        "B",
+        "A"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "C": 0,
+        "B": 1,
+        "A": 2
+      }
+    },
+    "components": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "assetId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "componentTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "componentTypeName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fluidMass": {
+            "type": "number",
+            "format": "double"
+          },
+          "vaporVolume": {
+            "type": "number",
+            "format": "double"
+          },
+          "liquidVolume": {
+            "type": "number",
+            "format": "double"
+          },
+          "needsRbiRecalculation": {
+            "type": "boolean"
+          },
+          "inDifferentInventoryGroup": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "inventoryGroupUpdateType": {
+      "enum": [
+        "None",
+        "Insert",
+        "Update",
+        "Delete"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "None": 0,
+        "Insert": 1,
+        "Update": 2,
+        "Delete": 3
+      }
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

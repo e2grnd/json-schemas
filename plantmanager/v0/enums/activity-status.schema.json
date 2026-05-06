@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/activity-status.schema.json",
+  "title": "ActivityStatus",
+  "type": "string",
+  "enum": [
+    "None",
+    "Planned",
+    "InProgress",
+    "Completed"
+  ],
+  "x-enum-map": {
+    "None": 0,
+    "Planned": 1,
+    "InProgress": 2,
+    "Completed": 3
+  }
+}

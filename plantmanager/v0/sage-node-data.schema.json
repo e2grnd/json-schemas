@@ -1,0 +1,1350 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-node-data.schema.json",
+  "title": "SageNodeData",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "module": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inputUnits": {
+          "enum": [
+            "English",
+            "Metric"
+          ],
+          "type": "string",
+          "x-enum-map": {
+            "English": 0,
+            "Metric": 1
+          }
+        },
+        "comment": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "data": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        },
+        "inputBase": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        },
+        "children": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "parametric": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "annotations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "keyword": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "col": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "row": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "table": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "flag": {
+                "enum": [
+                  "None",
+                  "Assumption",
+                  "Default",
+                  "NeedsReview",
+                  "Suspect",
+                  "CheckUnits"
+                ],
+                "type": "string",
+                "x-enum-map": {
+                  "None": 0,
+                  "Assumption": 1,
+                  "Default": 2,
+                  "NeedsReview": 3,
+                  "Suspect": 4,
+                  "CheckUnits": 5
+                }
+              },
+              "comment": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "defaultChange": {
+                "type": "object",
+                "properties": {
+                  "fromVersion": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "toVersion": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fromValue": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "toValue": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "runTime": {
+          "type": "number",
+          "format": "double"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "calculatorVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "module": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "statusMessage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "warningMessage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outputData": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        },
+        "children": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "plots": {
+          "type": "object",
+          "properties": {
+            "linePlots": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "parentPath": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "groupName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "scaleTypeX": {
+                    "enum": [
+                      "Log",
+                      "Linear"
+                    ],
+                    "type": "string",
+                    "x-enum-map": {
+                      "Log": 0,
+                      "Linear": 1
+                    }
+                  },
+                  "chartType": {
+                    "enum": [
+                      "Bar",
+                      "Line",
+                      "Pie",
+                      "Scatter",
+                      "Surface"
+                    ],
+                    "type": "string",
+                    "x-enum-map": {
+                      "Bar": 0,
+                      "Line": 1,
+                      "Pie": 2,
+                      "Scatter": 3,
+                      "Surface": 4
+                    }
+                  },
+                  "axisType": {
+                    "enum": [
+                      "Numeric",
+                      "DateNumeric"
+                    ],
+                    "type": "string",
+                    "x-enum-map": {
+                      "Numeric": 0,
+                      "DateNumeric": 1
+                    }
+                  },
+                  "cloneNumber": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "chartSeriesData": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "defaultConfig": {
+                          "type": "object",
+                          "properties": {
+                            "visible": {
+                              "type": "boolean"
+                            },
+                            "showInLegend": {
+                              "type": "boolean"
+                            },
+                            "color": {
+                              "type": "object",
+                              "properties": {
+                                "r": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                },
+                                "g": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                },
+                                "b": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                },
+                                "a": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                },
+                                "isKnownColor": {
+                                  "type": "boolean"
+                                },
+                                "isEmpty": {
+                                  "type": "boolean"
+                                },
+                                "isNamedColor": {
+                                  "type": "boolean"
+                                },
+                                "isSystemColor": {
+                                  "type": "boolean"
+                                },
+                                "name": {
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                }
+                              },
+                              "additionalProperties": false
+                            },
+                            "title": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "seriesType": {
+                              "enum": [
+                                "Point",
+                                "Line",
+                                "PointArea",
+                                "LineArea"
+                              ],
+                              "type": "string",
+                              "x-enum-map": {
+                                "Point": 0,
+                                "Line": 1,
+                                "PointArea": 2,
+                                "LineArea": 3
+                              }
+                            },
+                            "markerShape": {
+                              "enum": [
+                                "Circle",
+                                "None",
+                                "Hexagon",
+                                "InverseTriangle",
+                                "Pentagon",
+                                "Square",
+                                "Star",
+                                "7",
+                                "-1"
+                              ],
+                              "type": "string",
+                              "x-enum-map": {
+                                "Circle": 0,
+                                "None": 1,
+                                "Hexagon": 2,
+                                "InverseTriangle": 3,
+                                "Pentagon": 4,
+                                "Square": 5,
+                                "Star": 6
+                              }
+                            },
+                            "markerSize": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "markersVisible": {
+                              "type": "boolean"
+                            },
+                            "lineThickness": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "lineStyle": {
+                              "enum": [
+                                "Dashed",
+                                "DotDashed",
+                                "Dotted",
+                                "Solid"
+                              ],
+                              "type": "string",
+                              "x-enum-map": {
+                                "Dashed": 0,
+                                "DotDashed": 1,
+                                "Dotted": 2,
+                                "Solid": 3
+                              }
+                            },
+                            "smooth": {
+                              "type": "boolean"
+                            },
+                            "fillTitle": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "fillDirection": {
+                              "enum": [
+                                "Up",
+                                "Down"
+                              ],
+                              "type": "string",
+                              "x-enum-map": {
+                                "Up": 0,
+                                "Down": 1
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "points": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "x": {
+                                "type": "number",
+                                "format": "double"
+                              },
+                              "y": {
+                                "type": "number",
+                                "format": "double"
+                              },
+                              "z": {
+                                "type": "number",
+                                "format": "double"
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        "minX": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "maxX": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "minY": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "maxY": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "minZ": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "maxZ": {
+                          "type": "number",
+                          "format": "double"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "defaultOptions": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "subTitle": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "subSubTitle": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "legendPlacementHorizontal": {
+                        "enum": [
+                          "LeftOutside",
+                          "Left",
+                          "Center",
+                          "Right",
+                          "RightOutside"
+                        ],
+                        "type": "string",
+                        "x-enum-map": {
+                          "LeftOutside": 0,
+                          "Left": 1,
+                          "Center": 2,
+                          "Right": 3,
+                          "RightOutside": 4
+                        }
+                      },
+                      "legendPlacementVertical": {
+                        "enum": [
+                          "TopOutside",
+                          "Top",
+                          "Center",
+                          "Bottom",
+                          "BottomOutside"
+                        ],
+                        "type": "string",
+                        "x-enum-map": {
+                          "TopOutside": 0,
+                          "Top": 1,
+                          "Center": 2,
+                          "Bottom": 3,
+                          "BottomOutside": 4
+                        }
+                      },
+                      "tickCountX": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "tickCountY": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "allowZoom": {
+                        "type": "boolean"
+                      },
+                      "allowScroll": {
+                        "type": "boolean"
+                      },
+                      "visualRangeMinX": {
+                        "type": "number",
+                        "format": "double"
+                      },
+                      "visualRangeMaxX": {
+                        "type": "number",
+                        "format": "double"
+                      },
+                      "showCrosshairX": {
+                        "type": "boolean"
+                      },
+                      "showCrosshairLableX": {
+                        "type": "boolean"
+                      },
+                      "showCrosshairY": {
+                        "type": "boolean"
+                      },
+                      "showCrosshairLableY": {
+                        "type": "boolean"
+                      },
+                      "axisTitleX": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "axisTitleY": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "maxDecimalPlacesX": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "maxDecimalPlacesY": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "visualRangeMinY": {
+                        "type": "number",
+                        "format": "double"
+                      },
+                      "visualRangeMaxY": {
+                        "type": "number",
+                        "format": "double"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "surfacePlots": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "parentPath": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "groupName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "cloneNumber": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "chartSeriesData": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "defaultConfig": {
+                          "type": "object",
+                          "properties": {
+                            "visible": {
+                              "type": "boolean"
+                            },
+                            "showInLegend": {
+                              "type": "boolean"
+                            },
+                            "title": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "points": {
+                          "type": [
+                            "array",
+                            "null"
+                          ]
+                        },
+                        "minX": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "maxX": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "minY": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "maxY": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "minZ": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "maxZ": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "surfaceCells": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "enum": [
+                                  "Quadrilateral",
+                                  "Triangle",
+                                  "Functional"
+                                ],
+                                "type": "string",
+                                "x-enum-map": {
+                                  "Quadrilateral": 0,
+                                  "Triangle": 1,
+                                  "Functional": 2
+                                }
+                              },
+                              "pointIds": {
+                                "type": [
+                                  "array",
+                                  "null"
+                                ],
+                                "items": {
+                                  "type": "integer",
+                                  "format": "int32"
+                                }
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        "displacementPoints": {
+                          "type": [
+                            "array",
+                            "null"
+                          ]
+                        },
+                        "scalars": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "data": {
+                                "type": [
+                                  "array",
+                                  "null"
+                                ],
+                                "items": {
+                                  "type": "number",
+                                  "format": "double"
+                                }
+                              },
+                              "count": {
+                                "type": "integer",
+                                "format": "int32"
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        "yCount": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "xCount": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "defaultOptions": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "subTitle": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "subSubTitle": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "tickCountX": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "tickCountY": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "allowZoom": {
+                        "type": "boolean"
+                      },
+                      "allowScroll": {
+                        "type": "boolean"
+                      },
+                      "axisTitleX": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "axisTitleY": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "axisTitleZ": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "displayGroupName": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "drawGridLinesX": {
+                        "type": "boolean"
+                      },
+                      "drawGridLinesY": {
+                        "type": "boolean"
+                      },
+                      "drawGridLinesZ": {
+                        "type": "boolean"
+                      },
+                      "showTitle": {
+                        "type": "boolean"
+                      },
+                      "showAxesLabels": {
+                        "type": "boolean"
+                      },
+                      "showScaleBar": {
+                        "type": "boolean"
+                      },
+                      "showContourLines": {
+                        "type": "boolean"
+                      },
+                      "numberContourLines": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "viewDirection": {
+                        "enum": [
+                          "Top",
+                          "XSide",
+                          "YSide",
+                          "Skew"
+                        ],
+                        "type": "string",
+                        "x-enum-map": {
+                          "Top": 0,
+                          "XSide": 1,
+                          "YSide": 2,
+                          "Skew": 3
+                        }
+                      },
+                      "deformationScaleFactor": {
+                        "type": "number",
+                        "format": "double"
+                      },
+                      "zoomAmount": {
+                        "type": "number",
+                        "format": "double"
+                      },
+                      "scalarDisplayOptions": {
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "title": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "units": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "format": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "visible": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "scalarCount": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "hasScalars": {
+                    "type": "boolean"
+                  },
+                  "defaultScalarIndex": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "internalError": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "eecInputDeck": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "tables": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "shape": {
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      },
+                      "array": {
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": "number",
+                          "format": "double"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "params": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "valuesString": {
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "valuesInteger": {
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "valuesDouble": {
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": "number",
+                          "format": "double"
+                        }
+                      },
+                      "isArray": {
+                        "type": "boolean"
+                      },
+                      "valueType": {}
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            },
+            "metadata": {
+              "type": "object",
+              "properties": {
+                "calculatorName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "jobName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "params": {
+                  "type": [
+                    "array",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "eecCalcType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "eecCalculationResultId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reportOptions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "mapId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "module": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "error": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "reports": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "reportFileName": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "modeId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "functionalResultCache": {
+          "type": "object",
+          "properties": {
+            "defaults": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "keywordName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "column": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "clone": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "units": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "validValues": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "keywordName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "column": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "row": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "table": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "values": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "description": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "parametricRowId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "int32"
+        },
+        "isParametricResult": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "parametricStudyConfiguration": {
+          "type": "object",
+          "properties": {
+            "inputDataItems": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "keyword": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "indexes": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
+                  "presentationIndex": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "outputDataItems": {
+              "type": [
+                "array",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "configKeywords": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        },
+        "children": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "hasCalculationReportTemplate": {
+      "type": "boolean"
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "versionSavedAs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "latestAuditId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

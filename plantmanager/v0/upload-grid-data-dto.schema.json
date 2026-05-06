@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/upload-grid-data-dto.schema.json",
+  "title": "UploadGridDataDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "fileName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "errors": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

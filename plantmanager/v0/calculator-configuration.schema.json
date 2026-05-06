@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/calculator-configuration.schema.json",
+  "title": "CalculatorConfiguration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "parametricStudyConfiguration": {
+      "type": "object",
+      "properties": {
+        "inputDataItems": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "keyword": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "indexes": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "presentationIndex": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "outputDataItems": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "configKeywords": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {}
+    },
+    "children": {
+      "type": [
+        "array",
+        "null"
+      ]
+    }
+  }
+}

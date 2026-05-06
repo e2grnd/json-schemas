@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.eec.started.schema.json",
+  "title": "calculation.eec.started data",
+  "description": "Data payload for the calculation.eec.started event, emitted when an EEC calculation job begins execution on a worker.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["jobId", "tenantKey", "calcType"],
+  "properties": {
+    "jobId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUIDv7 job identifier; also the Temporal workflow ID."
+    },
+    "tenantKey": {
+      "type": "string",
+      "description": "Tenant identifier of the submitting organization."
+    },
+    "calcType": {
+      "type": "string",
+      "enum": ["eec"],
+      "description": "Calculator type. Always 'eec' for this event."
+    },
+    "calcName": {
+      "type": "string",
+      "description": "Optional human-readable calculation name supplied at submission."
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp when execution began."
+    }
+  }
+}

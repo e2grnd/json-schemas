@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/isolation.schema.json",
+  "title": "Isolation",
+  "type": "string",
+  "enum": [
+    "C",
+    "B",
+    "A"
+  ],
+  "x-enum-map": {
+    "C": 0,
+    "B": 1,
+    "A": 2
+  }
+}

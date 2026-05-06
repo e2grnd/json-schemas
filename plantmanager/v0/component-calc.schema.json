@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/component-calc.schema.json",
+  "title": "ComponentCalc",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "isNew": {
+      "type": "boolean"
+    },
+    "onlySetNulls": {
+      "type": "boolean"
+    },
+    "calculationTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "Component",
+          "Sage",
+          "Level1",
+          "Flash",
+          "Rbi",
+          "Equipment",
+          "FfsThinning",
+          "FfsCracking",
+          "FfsPitting",
+          "FfsCreep",
+          "FfsDent",
+          "FfsGouge"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "Component": 1,
+          "Sage": 2,
+          "Level1": 3,
+          "Flash": 4,
+          "Rbi": 5,
+          "Equipment": 6,
+          "FfsThinning": 7,
+          "FfsCracking": 8,
+          "FfsPitting": 9,
+          "FfsCreep": 10,
+          "FfsDent": 11,
+          "FfsGouge": 12
+        }
+      }
+    },
+    "calculateMawp": {
+      "type": "boolean"
+    },
+    "updateGoverningTmin": {
+      "type": "boolean"
+    },
+    "sageModuleEntityId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    }
+  }
+}

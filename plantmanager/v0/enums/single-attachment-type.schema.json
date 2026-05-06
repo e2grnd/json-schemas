@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/single-attachment-type.schema.json",
+  "title": "SingleAttachmentType",
+  "type": "string",
+  "enum": [
+    "ActivitySurveyCalibration"
+  ],
+  "x-enum-map": {
+    "ActivitySurveyCalibration": 1
+  }
+}

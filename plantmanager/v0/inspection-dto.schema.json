@@ -1,0 +1,297 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/inspection-dto.schema.json",
+  "title": "InspectionDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "template": {
+      "enum": [
+        "Generic",
+        "Survey",
+        "Inspection"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Generic": 1,
+        "Survey": 2,
+        "Inspection": 3
+      }
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "activityTypeId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "campaign": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectors": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "Active",
+              "Inactive"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "Active": 1,
+              "Inactive": 2
+            }
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updateType": {
+            "enum": [
+              "Add",
+              "Update",
+              "Delete"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "Add": 1,
+              "Update": 2,
+              "Delete": 3
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "inspectionGrades": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "componentId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "activityItemId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "activityTypeId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "componentName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inspectionApproach": {
+            "enum": [
+              "Intrusive",
+              "NonIntrusive"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "Intrusive": 1,
+              "NonIntrusive": 2
+            }
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "generalThinningActive": {
+            "type": "boolean"
+          },
+          "generalThinningGrade": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "A": 1,
+              "B": 2,
+              "C": 3,
+              "D": 4,
+              "E": 5
+            }
+          },
+          "localThinningActive": {
+            "type": "boolean"
+          },
+          "internalThickness": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "externalAtmActive": {
+            "type": "boolean"
+          },
+          "externalCuiActive": {
+            "type": "boolean"
+          },
+          "externalMetalLoss": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "externalCrackingActive": {
+            "type": "boolean"
+          },
+          "externalCuiaActive": {
+            "type": "boolean"
+          },
+          "amineCrackingActive": {
+            "type": "boolean"
+          },
+          "causticCrackingActive": {
+            "type": "boolean"
+          },
+          "ssch2sActive": {
+            "type": "boolean"
+          },
+          "hicsohich2sActive": {
+            "type": "boolean"
+          },
+          "carbonateCrackingActive": {
+            "type": "boolean"
+          },
+          "ptaCrackingActive": {
+            "type": "boolean"
+          },
+          "clsccActive": {
+            "type": "boolean"
+          },
+          "hicsohichfActive": {
+            "type": "boolean"
+          },
+          "hschfActive": {
+            "type": "boolean"
+          },
+          "otherCrackingActive": {
+            "type": "boolean"
+          },
+          "activityPhase": {
+            "enum": [
+              "Planning",
+              "Execution"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "Planning": 1,
+              "Execution": 2
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "inspectionId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    }
+  }
+}

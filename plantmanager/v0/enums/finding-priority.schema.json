@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/finding-priority.schema.json",
+  "title": "FindingPriority",
+  "type": "string",
+  "enum": [
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten"
+  ],
+  "x-enum-map": {
+    "One": 1,
+    "Two": 2,
+    "Three": 3,
+    "Four": 4,
+    "Five": 5,
+    "Six": 6,
+    "Seven": 7,
+    "Eight": 8,
+    "Nine": 9,
+    "Ten": 10
+  }
+}

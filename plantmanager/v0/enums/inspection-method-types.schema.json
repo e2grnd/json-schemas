@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/inspection-method-types.schema.json",
+  "title": "InspectionMethodTypes",
+  "type": "string",
+  "enum": [
+    "UNKOWN",
+    "UT",
+    "RT",
+    "N",
+    "I",
+    "S",
+    "H",
+    "D",
+    "C",
+    "P",
+    "V",
+    "Y",
+    "M"
+  ],
+  "x-enum-map": {
+    "UNKOWN": 0,
+    "UT": 1,
+    "RT": 2,
+    "N": 3,
+    "I": 4,
+    "S": 5,
+    "H": 6,
+    "D": 7,
+    "C": 8,
+    "P": 9,
+    "V": 10,
+    "Y": 11,
+    "M": 12
+  }
+}

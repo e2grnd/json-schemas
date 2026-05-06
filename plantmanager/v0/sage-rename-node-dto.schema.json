@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-rename-node-dto.schema.json",
+  "title": "SageRenameNodeDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

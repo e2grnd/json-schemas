@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/sage-approval-status.schema.json",
+  "title": "SageApprovalStatus",
+  "type": "string",
+  "enum": [
+    "NoStatus",
+    "ReleasedForApproval",
+    "Approved",
+    "Rejected",
+    "Revoked",
+    "Reset"
+  ],
+  "x-enum-map": {
+    "NoStatus": 0,
+    "ReleasedForApproval": 1,
+    "Approved": 2,
+    "Rejected": 3,
+    "Revoked": 4,
+    "Reset": 5
+  }
+}

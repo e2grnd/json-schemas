@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-tree-filters-dto.schema.json",
+  "title": "SageTreeFiltersDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "checkSharedWith": {
+      "type": "boolean"
+    },
+    "startDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "folderIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "moduleTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "createdBy": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "sharedWith": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "calculationStatus": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "New",
+          "Calculated",
+          "Warning",
+          "Error",
+          "Stale",
+          "NewVersion"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "New": 0,
+          "Calculated": 1,
+          "Warning": 2,
+          "Error": 3,
+          "Stale": 4,
+          "NewVersion": 5
+        }
+      }
+    },
+    "approvalStatus": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "NoStatus",
+          "ReleasedForApproval",
+          "Approved",
+          "Rejected",
+          "Revoked",
+          "Reset"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "NoStatus": 0,
+          "ReleasedForApproval": 1,
+          "Approved": 2,
+          "Rejected": 3,
+          "Revoked": 4,
+          "Reset": 5
+        }
+      }
+    },
+    "versions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

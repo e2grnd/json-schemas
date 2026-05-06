@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/future-activity-detail-dto.schema.json",
+  "title": "FutureActivityDetailDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "None",
+        "Planned",
+        "InProgress",
+        "Completed"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "None": 0,
+        "Planned": 1,
+        "InProgress": 2,
+        "Completed": 3
+      }
+    },
+    "scheduledDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "componentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "dueDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "activityType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectorNames": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "componentName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "templateType": {
+      "enum": [
+        "Generic",
+        "Survey",
+        "Inspection"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Generic": 1,
+        "Survey": 2,
+        "Inspection": 3
+      }
+    }
+  }
+}

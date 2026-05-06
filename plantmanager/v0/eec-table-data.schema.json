@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/eec-table-data.schema.json",
+  "title": "EecTableData",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shape": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "array": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "number",
+        "format": "double"
+      }
+    }
+  }
+}

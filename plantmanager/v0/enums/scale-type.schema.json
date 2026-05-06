@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/scale-type.schema.json",
+  "title": "ScaleType",
+  "type": "string",
+  "enum": [
+    "Log",
+    "Linear"
+  ],
+  "x-enum-map": {
+    "Log": 0,
+    "Linear": 1
+  }
+}

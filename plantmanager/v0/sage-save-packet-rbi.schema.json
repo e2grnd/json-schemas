@@ -1,0 +1,438 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-save-packet-rbi.schema.json",
+  "title": "SageSavePacketRbi",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "module": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inputUnits": {
+          "enum": [
+            "English",
+            "Metric"
+          ],
+          "type": "string",
+          "x-enum-map": {
+            "English": 0,
+            "Metric": 1
+          }
+        },
+        "comment": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "data": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        },
+        "inputBase": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        },
+        "children": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "parametric": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "annotations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "keyword": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "col": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "row": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "table": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "flag": {
+                "enum": [
+                  "None",
+                  "Assumption",
+                  "Default",
+                  "NeedsReview",
+                  "Suspect",
+                  "CheckUnits"
+                ],
+                "type": "string",
+                "x-enum-map": {
+                  "None": 0,
+                  "Assumption": 1,
+                  "Default": 2,
+                  "NeedsReview": 3,
+                  "Suspect": 4,
+                  "CheckUnits": 5
+                }
+              },
+              "comment": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "defaultChange": {
+                "type": "object",
+                "properties": {
+                  "fromVersion": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "toVersion": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fromValue": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "toValue": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "parametricStudyConfiguration": {
+          "type": "object",
+          "properties": {
+            "inputDataItems": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "keyword": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "indexes": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
+                  "presentationIndex": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "outputDataItems": {
+              "type": [
+                "array",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "configKeywords": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        },
+        "children": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "status": {
+      "enum": [
+        "New",
+        "Calculated",
+        "Warning",
+        "Error",
+        "Stale",
+        "NewVersion"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "New": 0,
+        "Calculated": 1,
+        "Warning": 2,
+        "Error": 3,
+        "Stale": 4,
+        "NewVersion": 5
+      }
+    },
+    "basisAuditId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "childModuleStructureUpdated": {
+      "type": "boolean"
+    },
+    "annotations": {
+      "type": "object",
+      "properties": {
+        "comments": {
+          "type": "boolean"
+        },
+        "flags": {
+          "type": "boolean"
+        },
+        "defaultAlerts": {
+          "type": "boolean"
+        },
+        "children": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "inspectionGrades": {
+      "type": "object",
+      "properties": {
+        "inspectionGrades": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uuid"
+              },
+              "componentId": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uuid"
+              },
+              "activityItemId": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uuid"
+              },
+              "activityTypeId": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uuid"
+              },
+              "componentName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "inspectionApproach": {
+                "enum": [
+                  "Intrusive",
+                  "NonIntrusive"
+                ],
+                "type": "string",
+                "x-enum-map": {
+                  "Intrusive": 1,
+                  "NonIntrusive": 2
+                }
+              },
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "generalThinningActive": {
+                "type": "boolean"
+              },
+              "generalThinningGrade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ],
+                "type": "string",
+                "x-enum-map": {
+                  "A": 1,
+                  "B": 2,
+                  "C": 3,
+                  "D": 4,
+                  "E": 5
+                }
+              },
+              "localThinningActive": {
+                "type": "boolean"
+              },
+              "internalThickness": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "format": "double"
+              },
+              "externalAtmActive": {
+                "type": "boolean"
+              },
+              "externalCuiActive": {
+                "type": "boolean"
+              },
+              "externalMetalLoss": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "format": "double"
+              },
+              "externalCrackingActive": {
+                "type": "boolean"
+              },
+              "externalCuiaActive": {
+                "type": "boolean"
+              },
+              "amineCrackingActive": {
+                "type": "boolean"
+              },
+              "causticCrackingActive": {
+                "type": "boolean"
+              },
+              "ssch2sActive": {
+                "type": "boolean"
+              },
+              "hicsohich2sActive": {
+                "type": "boolean"
+              },
+              "carbonateCrackingActive": {
+                "type": "boolean"
+              },
+              "ptaCrackingActive": {
+                "type": "boolean"
+              },
+              "clsccActive": {
+                "type": "boolean"
+              },
+              "hicsohichfActive": {
+                "type": "boolean"
+              },
+              "hschfActive": {
+                "type": "boolean"
+              },
+              "otherCrackingActive": {
+                "type": "boolean"
+              },
+              "activityPhase": {
+                "enum": [
+                  "Planning",
+                  "Execution"
+                ],
+                "type": "string",
+                "x-enum-map": {
+                  "Planning": 1,
+                  "Execution": 2
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

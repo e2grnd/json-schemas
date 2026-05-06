@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-gouge-output-dto.schema.json",
+  "title": "DamageMonitoringLocationGougeOutputDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "damageMonitoringLocationId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "statusMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "toughnessCurveDesignation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "yieldStressRoomTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumAllowableTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "remainingThicknessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumRemainingThicknessRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "corrodedMinimumMeasuredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thicknessLimitStructural": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "designPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "undamagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "undamagedRegionMaximumFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedRegionMaximumFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damageRegionMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "remainingLife": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumInspectionInterval": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedMawpMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "remainingLifeMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "localThinAreaApplicabilityAndLimitationsMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

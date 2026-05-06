@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/cached-valid-values.schema.json",
+  "title": "CachedValidValues",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "keywordName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "column": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "row": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "table": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "values": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

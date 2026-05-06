@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/attachment-dto.schema.json",
+  "title": "AttachmentDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "foreignKey": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "fileContent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "byte"
+    },
+    "fileId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "fileName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fileType": {
+      "enum": [
+        "UNKNOWN",
+        "PDF",
+        "IMAGE",
+        "TEXT"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "UNKNOWN": 0,
+        "PDF": 1,
+        "IMAGE": 2,
+        "TEXT": 3
+      }
+    },
+    "canPreview": {
+      "type": "boolean"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "parentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "attachmentType": {
+      "enum": [
+        "Folder",
+        "File"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Folder": 1,
+        "File": 2
+      }
+    },
+    "hasChildren": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/activity-effectiveness.schema.json",
+  "title": "ActivityEffectiveness",
+  "type": "string",
+  "enum": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "x-enum-map": {
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 4,
+    "E": 5
+  }
+}

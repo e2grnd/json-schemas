@@ -1,0 +1,442 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/export-cml-dto.schema.json",
+  "title": "ExportCmlDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "longRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shortRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "linearRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "scraLongRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "scraShortRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "scraLongRateStatistical": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "scraShortRateStatistical": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "scraLongRateCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scraShortRateCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nextInspectionDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "retirementDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "inspectionDriver": {
+      "enum": [
+        "HalfLife",
+        "MaximumInterval",
+        "Specified"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "HalfLife": 1,
+        "MaximumInterval": 2,
+        "Specified": 3
+      }
+    },
+    "governingCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "governingCorrosionRateType": {
+      "enum": [
+        "LongRate",
+        "ShortRate",
+        "BestFitRate",
+        "ScraLongRate",
+        "ScraShortRate",
+        "ScraStatShortRate",
+        "ScraStatLongRate",
+        "EstimatedRate"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "LongRate": 1,
+        "ShortRate": 2,
+        "BestFitRate": 3,
+        "ScraLongRate": 4,
+        "ScraShortRate": 5,
+        "ScraStatShortRate": 6,
+        "ScraStatLongRate": 7,
+        "EstimatedRate": 8
+      }
+    },
+    "maximumAllowableWorkingPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "orientation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "insulationType": {
+      "maxLength": 32,
+      "minLength": 0,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "injectionPoint": {
+      "type": "boolean"
+    },
+    "soilToAir": {
+      "type": "boolean"
+    },
+    "mixPoint": {
+      "type": "boolean"
+    },
+    "deadLeg": {
+      "type": "boolean"
+    },
+    "specifiedSusceptibility": {
+      "type": "boolean"
+    },
+    "specifiedSusceptibilityValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maximumInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "inServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "active": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "replacementDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "specifiedMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "isMinimumThicknessOverridden": {
+      "type": "boolean"
+    },
+    "governingMinimumThickness": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "inspectionGroup": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "drawing": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "groupIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "headerBoxPlate": {
+      "enum": [
+        "Top",
+        "Side",
+        "End"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Top": 1,
+        "Side": 2,
+        "End": 3
+      }
+    },
+    "specifiedNextInspectionDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "nextInspectionDateComments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "readings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "thickness": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "thicknessComment": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "origMeasThickness": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "inspectionMethod": {
+            "enum": [
+              "UNKOWN",
+              "UT",
+              "RT",
+              "N",
+              "I",
+              "S",
+              "H",
+              "D",
+              "C",
+              "P",
+              "V",
+              "Y",
+              "M"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "UNKOWN": 0,
+              "UT": 1,
+              "RT": 2,
+              "N": 3,
+              "I": 4,
+              "S": 5,
+              "H": 6,
+              "D": 7,
+              "C": 8,
+              "P": 9,
+              "V": 10,
+              "Y": 11,
+              "M": 12
+            }
+          },
+          "isBaseline": {
+            "type": "boolean"
+          },
+          "surveyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "excludeFromCalculation": {
+            "type": "boolean"
+          },
+          "cmlId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureCorrection": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "accessLimitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "defaultProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "lineNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "circuitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

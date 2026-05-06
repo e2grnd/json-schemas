@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v0/envelope.schema.json",
+  "title": "Webhook Event Envelope",
+  "description": "Top-level envelope wrapping every webhook event posted to POST /v1/events. Contains routing metadata common to all event types; the event-specific payload is carried in 'data'.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "eventType",
+    "schemaVersion",
+    "occurredAt",
+    "tenantKey",
+    "data"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL of the JSON Schema describing this envelope and its event-specific data payload. Consumers can use this to validate the envelope or discover the schema version without parsing other fields."
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUIDv7 uniquely identifying this event occurrence (not the delivery attempt)."
+    },
+    "eventType": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(\\.[a-z][a-z0-9]*)+$",
+      "description": "Dot-separated event type name following the '<domain>.<resource-type>.<verb>' convention (e.g. 'calculation.sage.completed', 'plantmanager.equipment.created'). Specificity increases left-to-right. The first segment is the broadest useful namespace (a functional category or product name); the second is the specific resource type; the third is the past-tense verb. Must contain at least two segments; each segment starts with a lowercase letter and contains only lowercase letters and digits."
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semver string (MAJOR.MINOR.PATCH) identifying the version of the event-data schema carried in 'data'. Used by consumers to select the correct data schema for validation and deserialization."
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 / RFC 3339 UTC timestamp recording when the event occurred in the source system."
+    },
+    "tenantKey": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Short identifier for the tenant that owns the resource that generated the event (e.g. 'acme')."
+    },
+    "data": {
+      "description": "Event-specific payload. The schema is discriminated by the eventType field.",
+      "oneOf": [
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.eec.completed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.eec.created.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.eec.failed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.eec.started.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.sage.completed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.sage.created.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.sage.failed.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.sage.started.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.equipment.created.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.equipment.deleted.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.equipment.updated.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/subscription.disabled.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/webhook.test.schema.json" }
+      ]
+    }
+  }
+}

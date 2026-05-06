@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/due-date-report-thickness-asset-data-dto.schema.json",
+  "title": "DueDateReportThicknessAssetDataDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "plantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetTypeName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastSurveyDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nextInspectionDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "minimumRetirementDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cmlsDue": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "totalCmls": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}

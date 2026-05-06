@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/service-status.schema.json",
+  "title": "ServiceStatus",
+  "type": "string",
+  "enum": [
+    "InService",
+    "OutOfService",
+    "Decommissioned"
+  ],
+  "x-enum-map": {
+    "InService": 1,
+    "OutOfService": 2,
+    "Decommissioned": 3
+  }
+}

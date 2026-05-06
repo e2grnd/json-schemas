@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/unit-system.schema.json",
+  "title": "UnitSystem",
+  "type": "string",
+  "enum": [
+    "English",
+    "Metric"
+  ],
+  "x-enum-map": {
+    "English": 0,
+    "Metric": 1
+  }
+}

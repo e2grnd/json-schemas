@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/fill-direction.schema.json",
+  "title": "FillDirection",
+  "type": "string",
+  "enum": [
+    "Up",
+    "Down"
+  ],
+  "x-enum-map": {
+    "Up": 0,
+    "Down": 1
+  }
+}

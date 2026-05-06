@@ -1,0 +1,431 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/unit-details-cml-dto.schema.json",
+  "title": "UnitDetailsCmlDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "componentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "size": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "innerDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "outerDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "nominalThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "componentName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "headerBoxPlate": {
+      "enum": [
+        "Top",
+        "Side",
+        "End"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Top": 1,
+        "Side": 2,
+        "End": 3
+      }
+    },
+    "orientation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "materialGrade": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "specifiedCMLMinimumThickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "isMinimumThicknessOverridden": {
+      "type": "boolean"
+    },
+    "governingMinimumThickness": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "excludeFromCalculation": {
+      "type": "boolean"
+    },
+    "longRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shortRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "linearRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "inServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "nextInspectionDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "retirementDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "replacementDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "readingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "readings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "thickness": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "thicknessComment": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "origMeasThickness": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "inspectionMethod": {
+            "enum": [
+              "UNKOWN",
+              "UT",
+              "RT",
+              "N",
+              "I",
+              "S",
+              "H",
+              "D",
+              "C",
+              "P",
+              "V",
+              "Y",
+              "M"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "UNKOWN": 0,
+              "UT": 1,
+              "RT": 2,
+              "N": 3,
+              "I": 4,
+              "S": 5,
+              "H": 6,
+              "D": 7,
+              "C": 8,
+              "P": 9,
+              "V": 10,
+              "Y": 11,
+              "M": 12
+            }
+          },
+          "isBaseline": {
+            "type": "boolean"
+          },
+          "surveyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "excludeFromCalculation": {
+            "type": "boolean"
+          },
+          "cmlId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "insulationType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "groupNames": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "scraResults": {
+      "type": "object",
+      "properties": {
+        "longRateCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "longRate": {
+          "type": "number",
+          "format": "double"
+        },
+        "shortRateCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shortRate": {
+          "type": "number",
+          "format": "double"
+        },
+        "longRateStatistical": {
+          "type": "number",
+          "format": "double"
+        },
+        "shortRateStatistical": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "additionalProperties": false
+    },
+    "compRetirementThickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "compStructuralRequiredThickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "compCorrodedThickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "compSpecifiedMinimumThickness": {
+      "type": "number",
+      "format": "double"
+    },
+    "inspectionGroup": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "drawing": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maximumAllowableWorkingPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "accessLimitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lineNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectionDriver": {
+      "enum": [
+        "HalfLife",
+        "MaximumInterval",
+        "Specified"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "HalfLife": 1,
+        "MaximumInterval": 2,
+        "Specified": 3
+      }
+    },
+    "governingCorrosionRateType": {
+      "enum": [
+        "LongRate",
+        "ShortRate",
+        "BestFitRate",
+        "ScraLongRate",
+        "ScraShortRate",
+        "ScraStatShortRate",
+        "ScraStatLongRate",
+        "EstimatedRate"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "LongRate": 1,
+        "ShortRate": 2,
+        "BestFitRate": 3,
+        "ScraLongRate": 4,
+        "ScraShortRate": 5,
+        "ScraStatShortRate": 6,
+        "ScraStatLongRate": 7,
+        "EstimatedRate": 8
+      }
+    },
+    "governingCorrosionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

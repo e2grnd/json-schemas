@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/copy-asset-dto.schema.json",
+  "title": "CopyAssetDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetType": {
+      "enum": [
+        "AirCooler",
+        "Boiler",
+        "Compressor",
+        "FiredHeater",
+        "HorizontalVessel",
+        "PipingSystem",
+        "PressureReliefDevice",
+        "Pump",
+        "ShellTubeHeatExchanger",
+        "Sphere",
+        "StorageTank",
+        "VerticalVessel",
+        "Other"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "AirCooler": 1,
+        "Boiler": 2,
+        "Compressor": 3,
+        "FiredHeater": 4,
+        "HorizontalVessel": 5,
+        "PipingSystem": 6,
+        "PressureReliefDevice": 7,
+        "Pump": 8,
+        "ShellTubeHeatExchanger": 9,
+        "Sphere": 10,
+        "StorageTank": 11,
+        "VerticalVessel": 12,
+        "Other": 13
+      }
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "surveysReadings": {
+      "type": "boolean"
+    },
+    "activitiesHistory": {
+      "type": "boolean"
+    },
+    "activitiesUpcoming": {
+      "type": "boolean"
+    },
+    "findings": {
+      "type": "boolean"
+    },
+    "comments": {
+      "type": "boolean"
+    },
+    "attachments": {
+      "type": "boolean"
+    },
+    "sage": {
+      "type": "boolean"
+    }
+  }
+}

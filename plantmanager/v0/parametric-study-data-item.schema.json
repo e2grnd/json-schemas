@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/parametric-study-data-item.schema.json",
+  "title": "ParametricStudyDataItem",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "keyword": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "indexes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "presentationIndex": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-tree-user-root-dto.schema.json",
+  "title": "SageTreeUserRootDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "rootId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "initialized": {
+      "type": "boolean"
+    }
+  }
+}

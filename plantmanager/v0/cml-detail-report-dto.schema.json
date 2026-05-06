@@ -1,0 +1,274 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/cml-detail-report-dto.schema.json",
+  "title": "CmlDetailReportDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "equipment": {
+      "type": "object",
+      "properties": {
+        "unitName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "equipmentName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "circuitName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "circuitDescription": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "designPressure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "designTemperature": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "operatingPressure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "operatingTemperature": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "maximumInterval": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "numberOfCmls": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "minRemainingLife": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "minRemainingLifeLocation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lastInspection": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "minNextInspection": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "minRetirement": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "cmlData": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "componentType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "size": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "minimumThickness": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "orientation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "nextInspection": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "retirementDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "insulated": {
+            "type": "string"
+          },
+          "remainingLife": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "longRateMeasured": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "shortRateMeasured": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "longRateStatistical": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "shortRateStatistical": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inspectionMethod1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "thickness1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "date1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inspectionMethod2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "thickness2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "date2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inspectionMethod3": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "thickness3": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "date3": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mawp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

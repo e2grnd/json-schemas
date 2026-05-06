@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/activity-phase.schema.json",
+  "title": "ActivityPhase",
+  "type": "string",
+  "enum": [
+    "Planning",
+    "Execution"
+  ],
+  "x-enum-map": {
+    "Planning": 1,
+    "Execution": 2
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/move-sage-tree-dto.schema.json",
+  "title": "MoveSageTreeDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "parentId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

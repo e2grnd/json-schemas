@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/component-tree-filter-items.schema.json",
+  "title": "ComponentTreeFilterItems",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "componentIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "componentTypeIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "UNKNOWN",
+          "PIPE",
+          "ELBOW",
+          "FITTING",
+          "HEAD",
+          "SHELL",
+          "NOZZLE",
+          "PLATE",
+          "BOILER_TUBE",
+          "FLOOR",
+          "ROOF",
+          "RISER",
+          "PLUG",
+          "TUBE",
+          "COURSE",
+          "ANNULAR_PLATE",
+          "HEADER_BOX",
+          "OTHER"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "UNKNOWN": 0,
+          "PIPE": 1,
+          "ELBOW": 2,
+          "FITTING": 3,
+          "HEAD": 4,
+          "SHELL": 5,
+          "NOZZLE": 6,
+          "PLATE": 7,
+          "BOILER_TUBE": 8,
+          "FLOOR": 9,
+          "ROOF": 10,
+          "RISER": 11,
+          "PLUG": 12,
+          "TUBE": 13,
+          "COURSE": 14,
+          "ANNULAR_PLATE": 15,
+          "HEADER_BOX": 16,
+          "OTHER": 17
+        }
+      }
+    }
+  }
+}

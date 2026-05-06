@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/file-type.schema.json",
+  "title": "FileType",
+  "type": "string",
+  "enum": [
+    "UNKNOWN",
+    "PDF",
+    "IMAGE",
+    "TEXT"
+  ],
+  "x-enum-map": {
+    "UNKNOWN": 0,
+    "PDF": 1,
+    "IMAGE": 2,
+    "TEXT": 3
+  }
+}

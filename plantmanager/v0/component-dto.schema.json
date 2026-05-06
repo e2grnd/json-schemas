@@ -1,0 +1,1155 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/component-dto.schema.json",
+  "title": "ComponentDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "defaultProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "designCode": {
+      "enum": [
+        "SectionI",
+        "Section8D1",
+        "Section8D2",
+        "B31_1",
+        "B31_3",
+        "B31_4",
+        "B31_8",
+        "API_650",
+        "API_653",
+        "API_620",
+        "API_530",
+        "AS_1210",
+        "AS_1210_1H",
+        "Section2D",
+        "Wrc503",
+        "Mpc",
+        "Section3D1C1",
+        "Section3D1C2",
+        "Section3D1C3",
+        "Section3D1Cmc",
+        "Section3D3Ctc",
+        "Section3D3Csc",
+        "Section12",
+        "Section8D2C1",
+        "B31T",
+        "ASMECodes",
+        "APICodes",
+        "Section3D5",
+        "STS_1",
+        "JIS_B_8265",
+        "HPGSL",
+        "NonCodeMaterial",
+        "UnsupportedCode",
+        "PhysicalProperty",
+        "AllCodes"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "SectionI": 0,
+        "Section8D1": 1,
+        "Section8D2": 2,
+        "B31_1": 3,
+        "B31_3": 4,
+        "B31_4": 5,
+        "B31_8": 6,
+        "API_650": 7,
+        "API_653": 8,
+        "API_620": 9,
+        "API_530": 10,
+        "AS_1210": 11,
+        "AS_1210_1H": 12,
+        "Section2D": 13,
+        "Wrc503": 14,
+        "Mpc": 15,
+        "Section3D1C1": 16,
+        "Section3D1C2": 17,
+        "Section3D1C3": 18,
+        "Section3D1Cmc": 19,
+        "Section3D3Ctc": 20,
+        "Section3D3Csc": 21,
+        "Section12": 22,
+        "Section8D2C1": 23,
+        "B31T": 24,
+        "ASMECodes": 25,
+        "APICodes": 26,
+        "Section3D5": 27,
+        "STS_1": 28,
+        "JIS_B_8265": 29,
+        "HPGSL": 30,
+        "NonCodeMaterial": 31,
+        "UnsupportedCode": 998,
+        "PhysicalProperty": 999,
+        "AllCodes": 1000
+      }
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "compType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentTypeId": {
+      "enum": [
+        "UNKNOWN",
+        "PIPE",
+        "ELBOW",
+        "FITTING",
+        "HEAD",
+        "SHELL",
+        "NOZZLE",
+        "PLATE",
+        "BOILER_TUBE",
+        "FLOOR",
+        "ROOF",
+        "RISER",
+        "PLUG",
+        "TUBE",
+        "COURSE",
+        "ANNULAR_PLATE",
+        "HEADER_BOX",
+        "OTHER"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "UNKNOWN": 0,
+        "PIPE": 1,
+        "ELBOW": 2,
+        "FITTING": 3,
+        "HEAD": 4,
+        "SHELL": 5,
+        "NOZZLE": 6,
+        "PLATE": 7,
+        "BOILER_TUBE": 8,
+        "FLOOR": 9,
+        "ROOF": 10,
+        "RISER": 11,
+        "PLUG": 12,
+        "TUBE": 13,
+        "COURSE": 14,
+        "ANNULAR_PLATE": 15,
+        "HEADER_BOX": 16,
+        "OTHER": 17
+      }
+    },
+    "inServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "eqInServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "eqRbi": {
+      "type": "boolean"
+    },
+    "rbi": {
+      "type": "boolean"
+    },
+    "assetType": {
+      "enum": [
+        "AirCooler",
+        "Boiler",
+        "Compressor",
+        "FiredHeater",
+        "HorizontalVessel",
+        "PipingSystem",
+        "PressureReliefDevice",
+        "Pump",
+        "ShellTubeHeatExchanger",
+        "Sphere",
+        "StorageTank",
+        "VerticalVessel",
+        "Other"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "AirCooler": 1,
+        "Boiler": 2,
+        "Compressor": 3,
+        "FiredHeater": 4,
+        "HorizontalVessel": 5,
+        "PipingSystem": 6,
+        "PressureReliefDevice": 7,
+        "Pump": 8,
+        "ShellTubeHeatExchanger": 9,
+        "Sphere": 10,
+        "StorageTank": 11,
+        "VerticalVessel": 12,
+        "Other": 13
+      }
+    },
+    "designTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "designPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "eqDesignTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "eqDesignPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "eqSpecifiedMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "eqUseMawpApproach": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "geomType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plateType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "insulationType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "liningType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jointEfficiency": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "futureCorrosionAllowance": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "length": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "outerDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "innerDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "nominalThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "nps": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pipeSchedule": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nonStandardTube": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "bendRadius": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "miterAngle": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "coneAngle": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "knuckleRadius": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crownRadius": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "axisRatio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "largePlateDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "plateDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "largeInnerDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "underTolerance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "clad": {
+      "type": "boolean"
+    },
+    "cladThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "useMawpApproach": {
+      "type": "boolean"
+    },
+    "minimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "isRetirementThickness": {
+      "type": "boolean"
+    },
+    "isStructuralRequiredThickness": {
+      "type": "boolean"
+    },
+    "isCorrodedThickness": {
+      "type": "boolean"
+    },
+    "isSpecifiedThickness": {
+      "type": "boolean"
+    },
+    "specifiedMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "sageModuleEntityId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "calculate": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isSmallConnection": {
+      "type": "boolean"
+    },
+    "specification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "grade": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "year": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uns": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cct": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "st": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "modifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unsGroup": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unsSubGroup": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "materialCommonName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "allowableTensileStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "yieldStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "ultimateTensileStress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "youngsModulus": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalPressureChart": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "toughnessCurveDesignation": {
+      "enum": [
+        "TEMP",
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI",
+        "IIIA",
+        "IVA",
+        "A",
+        "B",
+        "C",
+        "D",
+        "CI_20",
+        "CI_20_A",
+        "CS20A",
+        "CS0",
+        "CS_20",
+        "CS_20A",
+        "CS_50",
+        "CS_55",
+        "CS_A",
+        "CS_B",
+        "CS_C",
+        "CS_D",
+        "CU_325",
+        "CU_452",
+        "LA20",
+        "LA0",
+        "LA_100",
+        "LA_150",
+        "LA_20",
+        "LA_275",
+        "LA_320",
+        "LA_40",
+        "LA_55",
+        "LA_75",
+        "SS_20",
+        "SS_325",
+        "SS_425",
+        "SS_60",
+        "T1_75"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "TEMP": 0,
+        "I": 1,
+        "II": 2,
+        "III": 3,
+        "IV": 4,
+        "V": 5,
+        "VI": 6,
+        "IIIA": 31,
+        "IVA": 41,
+        "A": 101,
+        "B": 102,
+        "C": 103,
+        "D": 104,
+        "CI_20": 201,
+        "CI_20_A": 202,
+        "CS20A": 203,
+        "CS0": 204,
+        "CS_20": 205,
+        "CS_20A": 206,
+        "CS_50": 207,
+        "CS_55": 208,
+        "CS_A": 209,
+        "CS_B": 210,
+        "CS_C": 211,
+        "CS_D": 212,
+        "CU_325": 213,
+        "CU_452": 214,
+        "LA20": 215,
+        "LA0": 216,
+        "LA_100": 217,
+        "LA_150": 218,
+        "LA_20": 219,
+        "LA_275": 220,
+        "LA_320": 221,
+        "LA_40": 222,
+        "LA_55": 223,
+        "LA_75": 224,
+        "SS_20": 225,
+        "SS_325": 226,
+        "SS_425": 227,
+        "SS_60": 228,
+        "T1_75": 229
+      }
+    },
+    "fittingType": {
+      "enum": [
+        "UNKNOWN",
+        "TEE",
+        "REDUCER",
+        "RED_ELBOW",
+        "RED_TEE",
+        "CAP"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "UNKNOWN": 0,
+        "TEE": 1,
+        "REDUCER": 2,
+        "RED_ELBOW": 3,
+        "RED_TEE": 4,
+        "CAP": 5
+      }
+    },
+    "nps2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pipeSchedule2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outerDiameter2": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "nominalThickness2": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "bwg": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "quantity": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "tankNominalDiameter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "courseHeight": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "courseNumber": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "plateWidth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "cladSpecification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cladGrade": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cladYear": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cladUns": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cladCct": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cladSt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cladModifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cladMaterialType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "circumferentialRequiredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "longitudinalRequiredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "finalRequiredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "retirementThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "corrodedThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "structuralRequiredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "structuralRetirementThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "finalRetirementThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "recommendedRequiredThicknessFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "recommendedThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumDesignMetalTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "maximumAllowableWorkingPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "recommendedMinimumTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "recommendedNPS": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recommendedSchedule": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maximumFutureCorrosionAllowance": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "hasMawpCalculationError": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "circuitId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "gffType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "calculateLiquidFraction": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "estimatedLiquidPercent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "inventoryGroupId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "planDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "shortSideJointEfficiency": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "longSideJointEfficiency": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "endPlateJointEfficiency": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "axialLength": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shortPlateInsideLength": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shortPlateThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "longPlateInsideLength": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "longPlateThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "endPlateThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shortPlateCorrosionAllowance": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "longPlateCorrosionAllowance": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "endPlateCorrosionAllowance": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shortPlateCorrodedThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "longPlateCorrodedThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "endPlateCorrodedThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "shortPlateSpecifiedMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "longPlateSpecifiedMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "endPlateSpecifiedMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "facility": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "locationClass": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "siteFactor": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "status": {
+      "enum": [
+        "Active",
+        "Disabled"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Active": 1,
+        "Disabled": 2
+      }
+    },
+    "useAdvancedCalculation": {
+      "type": "boolean"
+    },
+    "componentAttachedTo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "nozzleNeckMinimumThicknessBasis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nozzleNeckMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "nozzleReinforcementMinimumThicknessBasis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "grooveWelds": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outsideFilletWeld": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "nozzleGrooveWeld": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  }
+}

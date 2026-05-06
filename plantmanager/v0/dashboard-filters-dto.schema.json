@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/dashboard-filters-dto.schema.json",
+  "title": "DashboardFiltersDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "plantIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "unitIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "assetTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "AirCooler",
+          "Boiler",
+          "Compressor",
+          "FiredHeater",
+          "HorizontalVessel",
+          "PipingSystem",
+          "PressureReliefDevice",
+          "Pump",
+          "ShellTubeHeatExchanger",
+          "Sphere",
+          "StorageTank",
+          "VerticalVessel",
+          "Other"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "AirCooler": 1,
+          "Boiler": 2,
+          "Compressor": 3,
+          "FiredHeater": 4,
+          "HorizontalVessel": 5,
+          "PipingSystem": 6,
+          "PressureReliefDevice": 7,
+          "Pump": 8,
+          "ShellTubeHeatExchanger": 9,
+          "Sphere": 10,
+          "StorageTank": 11,
+          "VerticalVessel": 12,
+          "Other": 13
+        }
+      }
+    },
+    "serviceStatuses": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "InService",
+          "OutOfService",
+          "Decommissioned"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "InService": 1,
+          "OutOfService": 2,
+          "Decommissioned": 3
+        }
+      }
+    },
+    "activityTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "damageMode": {
+      "enum": [
+        "All",
+        "Thinning",
+        "External",
+        "Cracking"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "All": 0,
+        "Thinning": 1,
+        "External": 2,
+        "Cracking": 3
+      }
+    },
+    "threshold": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "currentDate": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

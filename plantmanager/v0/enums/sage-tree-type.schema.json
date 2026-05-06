@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/sage-tree-type.schema.json",
+  "title": "SageTreeType",
+  "type": "string",
+  "enum": [
+    "Folder",
+    "Module",
+    "Attachment",
+    "RootUser",
+    "RootAsset"
+  ],
+  "x-enum-map": {
+    "Folder": 1,
+    "Module": 2,
+    "Attachment": 3,
+    "RootUser": 4,
+    "RootAsset": 5
+  }
+}

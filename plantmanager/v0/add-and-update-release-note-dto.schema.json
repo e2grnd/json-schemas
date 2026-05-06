@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/add-and-update-release-note-dto.schema.json",
+  "title": "AddAndUpdateReleaseNoteDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "applicableAreaIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    }
+  }
+}

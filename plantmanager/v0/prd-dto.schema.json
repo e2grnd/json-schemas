@@ -1,0 +1,291 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/prd-dto.schema.json",
+  "title": "PrdDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "defaultProperties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "prdProtectedAssetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "prdProtectedComponentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "protectedAssets": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "inServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "reliefDeviceType": {
+      "enum": [
+        "Conventional",
+        "Balanced",
+        "Pilot",
+        "Rupture_Disk"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Conventional": 1,
+        "Balanced": 2,
+        "Pilot": 3,
+        "Rupture_Disk": 4
+      }
+    },
+    "orificeArea": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "inletSize": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "setPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "backPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "dischargeLocation": {
+      "enum": [
+        "Flare",
+        "Atmosphere",
+        "ClosedSystem"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Flare": 1,
+        "Atmosphere": 2,
+        "ClosedSystem": 3
+      }
+    },
+    "currentInspectionInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "serialNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "makeModel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jurisdictionalRegistrationNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jurisdictionalSerialNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inletType": {
+      "enum": [
+        "FlatFace",
+        "RaisedFace",
+        "RingJoint",
+        "ConeRing",
+        "Threaded"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "FlatFace": 1,
+        "RaisedFace": 2,
+        "RingJoint": 3,
+        "ConeRing": 4,
+        "Threaded": 5
+      }
+    },
+    "inletRating": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "outletRating": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "outletSize": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "temperatureCorrection": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "cdtp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "springNumber": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "lift": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "capacity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "serviceStatus": {
+      "enum": [
+        "InService",
+        "OutOfService",
+        "Decommissioned"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "InService": 1,
+        "OutOfService": 2,
+        "Decommissioned": 3
+      }
+    },
+    "manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "accessLimitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hasInternalAccess": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tenantKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extAssetId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rbi": {
+      "type": "boolean"
+    },
+    "unitId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    }
+  }
+}

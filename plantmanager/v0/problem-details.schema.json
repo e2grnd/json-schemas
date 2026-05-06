@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/problem-details.schema.json",
+  "title": "ProblemDetails",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "detail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

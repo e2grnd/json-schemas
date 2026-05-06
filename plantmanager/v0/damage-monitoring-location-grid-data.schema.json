@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-grid-data.schema.json",
+  "title": "DamageMonitoringLocationGridData",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "fileName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    }
+  }
+}

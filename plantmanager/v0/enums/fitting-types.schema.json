@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/fitting-types.schema.json",
+  "title": "FittingTypes",
+  "type": "string",
+  "enum": [
+    "UNKNOWN",
+    "TEE",
+    "REDUCER",
+    "RED_ELBOW",
+    "RED_TEE",
+    "CAP"
+  ],
+  "x-enum-map": {
+    "UNKNOWN": 0,
+    "TEE": 1,
+    "REDUCER": 2,
+    "RED_ELBOW": 3,
+    "RED_TEE": 4,
+    "CAP": 5
+  }
+}

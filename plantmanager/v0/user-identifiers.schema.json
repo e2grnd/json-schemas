@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/user-identifiers.schema.json",
+  "title": "UserIdentifiers",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

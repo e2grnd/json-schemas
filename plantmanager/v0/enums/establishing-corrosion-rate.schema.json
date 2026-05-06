@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/establishing-corrosion-rate.schema.json",
+  "title": "EstablishingCorrosionRate",
+  "type": "string",
+  "enum": [
+    "ProbableRate",
+    "TimeInterval"
+  ],
+  "x-enum-map": {
+    "ProbableRate": 1,
+    "TimeInterval": 2
+  }
+}

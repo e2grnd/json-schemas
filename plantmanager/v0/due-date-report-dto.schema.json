@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/due-date-report-dto.schema.json",
+  "title": "DueDateReportDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "startDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "endDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "plants": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "units": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "activityTypes": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "belowRetirement": {
+      "enum": [
+        "Include",
+        "Omit",
+        "BelowRetirementOnly"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Include": 1,
+        "Omit": 2,
+        "BelowRetirementOnly": 3
+      }
+    },
+    "assetTypeIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "inspectionDriverIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "HalfLife",
+          "MaximumInterval",
+          "Specified"
+        ],
+        "type": "string",
+        "x-enum-map": {
+          "HalfLife": 1,
+          "MaximumInterval": 2,
+          "Specified": 3
+        }
+      }
+    }
+  }
+}

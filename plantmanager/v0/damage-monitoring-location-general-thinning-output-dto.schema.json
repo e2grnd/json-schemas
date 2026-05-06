@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/damage-monitoring-location-general-thinning-output-dto.schema.json",
+  "title": "DamageMonitoringLocationGeneralThinningOutputDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "damageMonitoringLocationId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "statusMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hoopAverageThicknessLessFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "axialAverageThicknessLessFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "corrodedMinimumMeasuredThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "structuralMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "designPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "undamagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "averageThicknessMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumThicknessMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedMawp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "undamagedRegionMaximumFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedRegionMaximumFca": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damageRegionMinimumThickness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "remainingLife": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumInspectionInterval": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "damagedMawpMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "remainingLifeMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "applicabilityAndLimitationsMessages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

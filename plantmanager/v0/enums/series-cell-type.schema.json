@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/series-cell-type.schema.json",
+  "title": "SeriesCellType",
+  "type": "string",
+  "enum": [
+    "Quadrilateral",
+    "Triangle",
+    "Functional"
+  ],
+  "x-enum-map": {
+    "Quadrilateral": 0,
+    "Triangle": 1,
+    "Functional": 2
+  }
+}

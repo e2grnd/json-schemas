@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/cml-calc.schema.json",
+  "title": "CmlCalc",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "isNew": {
+      "type": "boolean"
+    },
+    "onlySetNulls": {
+      "type": "boolean"
+    },
+    "props": {
+      "enum": [
+        "All",
+        "BasicRates",
+        "Scra",
+        "GoverningRate",
+        "Dates"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "All": 0,
+        "BasicRates": 1,
+        "Scra": 2,
+        "GoverningRate": 3,
+        "Dates": 4
+      }
+    },
+    "calculateMawp": {
+      "type": "boolean"
+    },
+    "updateGoverningTmin": {
+      "type": "boolean"
+    }
+  }
+}

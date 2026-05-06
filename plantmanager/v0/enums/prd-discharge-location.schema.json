@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/prd-discharge-location.schema.json",
+  "title": "PrdDischargeLocation",
+  "type": "string",
+  "enum": [
+    "Flare",
+    "Atmosphere",
+    "ClosedSystem"
+  ],
+  "x-enum-map": {
+    "Flare": 1,
+    "Atmosphere": 2,
+    "ClosedSystem": 3
+  }
+}

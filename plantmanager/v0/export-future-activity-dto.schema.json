@@ -1,0 +1,399 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/export-future-activity-dto.schema.json",
+  "title": "ExportFutureActivityDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "None",
+        "Planned",
+        "InProgress",
+        "Completed"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "None": 0,
+        "Planned": 1,
+        "InProgress": 2,
+        "Completed": 3
+      }
+    },
+    "scheduledDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "componentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "governingDueDate": {
+      "enum": [
+        "Calculated",
+        "Rbi",
+        "Specified"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Calculated": 1,
+        "Rbi": 2,
+        "Specified": 3
+      }
+    },
+    "calculatedDueDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "specifiedDueDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "campaign": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "planningComments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "executionComments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "activityTypeId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "inspectors": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "completionDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "inspectorsCompletedBy": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "inspectionGrades": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "componentId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "activityItemId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "activityTypeId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "componentName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inspectionApproach": {
+            "enum": [
+              "Intrusive",
+              "NonIntrusive"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "Intrusive": 1,
+              "NonIntrusive": 2
+            }
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "generalThinningActive": {
+            "type": "boolean"
+          },
+          "generalThinningGrade": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "A": 1,
+              "B": 2,
+              "C": 3,
+              "D": 4,
+              "E": 5
+            }
+          },
+          "localThinningActive": {
+            "type": "boolean"
+          },
+          "internalThickness": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "externalAtmActive": {
+            "type": "boolean"
+          },
+          "externalCuiActive": {
+            "type": "boolean"
+          },
+          "externalMetalLoss": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          },
+          "externalCrackingActive": {
+            "type": "boolean"
+          },
+          "externalCuiaActive": {
+            "type": "boolean"
+          },
+          "amineCrackingActive": {
+            "type": "boolean"
+          },
+          "causticCrackingActive": {
+            "type": "boolean"
+          },
+          "ssch2sActive": {
+            "type": "boolean"
+          },
+          "hicsohich2sActive": {
+            "type": "boolean"
+          },
+          "carbonateCrackingActive": {
+            "type": "boolean"
+          },
+          "ptaCrackingActive": {
+            "type": "boolean"
+          },
+          "clsccActive": {
+            "type": "boolean"
+          },
+          "hicsohichfActive": {
+            "type": "boolean"
+          },
+          "hschfActive": {
+            "type": "boolean"
+          },
+          "otherCrackingActive": {
+            "type": "boolean"
+          },
+          "activityPhase": {
+            "enum": [
+              "Planning",
+              "Execution"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "Planning": 1,
+              "Execution": 2
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "dueDateList": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dueDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tenantKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "primaryInspectionMethod": {
+      "enum": [
+        "UNKOWN",
+        "UT",
+        "RT",
+        "N",
+        "I",
+        "S",
+        "H",
+        "D",
+        "C",
+        "P",
+        "V",
+        "Y",
+        "M"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "UNKOWN": 0,
+        "UT": 1,
+        "RT": 2,
+        "N": 3,
+        "I": 4,
+        "S": 5,
+        "H": 6,
+        "D": 7,
+        "C": 8,
+        "P": 9,
+        "V": 10,
+        "Y": 11,
+        "M": 12
+      }
+    },
+    "isBaseline": {
+      "type": "boolean"
+    },
+    "instrumentId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "probeId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "specifiedDueDateComments": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "activityTypeName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

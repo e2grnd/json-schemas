@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/damage-monitoring-location-grid-orientations.schema.json",
+  "title": "DamageMonitoringLocationGridOrientations",
+  "type": "string",
+  "enum": [
+    "Circumferential",
+    "Longitudinal"
+  ],
+  "x-enum-map": {
+    "Circumferential": 1,
+    "Longitudinal": 2
+  }
+}

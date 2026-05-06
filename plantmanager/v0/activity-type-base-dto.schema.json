@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/activity-type-base-dto.schema.json",
+  "title": "ActivityTypeBaseDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "template": {
+      "enum": [
+        "Generic",
+        "Survey",
+        "Inspection"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Generic": 1,
+        "Survey": 2,
+        "Inspection": 3
+      }
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetsUsing": {
+      "type": "boolean"
+    }
+  }
+}

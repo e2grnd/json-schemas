@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/attachment-reorder-dto.schema.json",
+  "title": "AttachmentReorderDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "attachmentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}

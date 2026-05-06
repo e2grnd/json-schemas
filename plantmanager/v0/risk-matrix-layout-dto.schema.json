@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/risk-matrix-layout-dto.schema.json",
+  "title": "RiskMatrixLayoutDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "cofAxisCategory": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "pofAxisCategory": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "transposeAxis": {
+      "type": "boolean"
+    },
+    "cofCategories": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "cofCategory": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cofLowerThreshold": {
+            "type": "number",
+            "format": "double"
+          },
+          "cofUpperThreshold": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "pofCategories": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "pofCategory": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pofLowerThreshold": {
+            "type": "number",
+            "format": "double"
+          },
+          "pofUpperThreshold": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "riskCategories": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "riskRank": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "riskCategory": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "riskColor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "layoutMappings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "cofCategoryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "pofCategoryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "riskCategoryId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

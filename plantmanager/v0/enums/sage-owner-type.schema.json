@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/sage-owner-type.schema.json",
+  "title": "SageOwnerType",
+  "type": "string",
+  "enum": [
+    "Folder",
+    "Tree",
+    "Component",
+    "Asset"
+  ],
+  "x-enum-map": {
+    "Folder": 1,
+    "Tree": 2,
+    "Component": 3,
+    "Asset": 4
+  }
+}

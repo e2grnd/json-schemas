@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/input-file.schema.json",
+  "title": "InputFile",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "module": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inputUnits": {
+      "enum": [
+        "English",
+        "Metric"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "English": 0,
+        "Metric": 1
+      }
+    },
+    "comment": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "data": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {}
+    },
+    "inputBase": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {}
+    },
+    "children": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "parametric": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "additionalProperties": {}
+      }
+    },
+    "annotations": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "col": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "row": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "table": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "flag": {
+            "enum": [
+              "None",
+              "Assumption",
+              "Default",
+              "NeedsReview",
+              "Suspect",
+              "CheckUnits"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "None": 0,
+              "Assumption": 1,
+              "Default": 2,
+              "NeedsReview": 3,
+              "Suspect": 4,
+              "CheckUnits": 5
+            }
+          },
+          "comment": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "defaultChange": {
+            "type": "object",
+            "properties": {
+              "fromVersion": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "toVersion": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fromValue": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "toValue": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

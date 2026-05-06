@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-module-attachment-dto.schema.json",
+  "title": "SageModuleAttachmentDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "blobId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fileName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

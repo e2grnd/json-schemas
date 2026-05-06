@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/asset-audit-log-entry-dto.schema.json",
+  "title": "AssetAuditLogEntryDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "auditId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "logTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "auditActionTarget": {
+      "enum": [
+        "Plant",
+        "Unit",
+        "Asset",
+        "Cml",
+        "Component",
+        "Circuit",
+        "Activity",
+        "Inspector",
+        "ActivityType",
+        "Reading",
+        "Finding",
+        "FluidStream",
+        "DamageMonitoringLocation",
+        "ActivityHistoryItem"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Plant": 0,
+        "Unit": 1,
+        "Asset": 2,
+        "Cml": 3,
+        "Component": 4,
+        "Circuit": 5,
+        "Activity": 6,
+        "Inspector": 7,
+        "ActivityType": 8,
+        "Reading": 9,
+        "Finding": 10,
+        "FluidStream": 11,
+        "DamageMonitoringLocation": 12,
+        "ActivityHistoryItem": 13
+      }
+    },
+    "assetSubId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetSubName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "action": {
+      "enum": [
+        "Add",
+        "Update",
+        "Copy",
+        "Import",
+        "UpgradeVersion",
+        "Rename",
+        "Share",
+        "Move"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Add": 1,
+        "Update": 2,
+        "Copy": 3,
+        "Import": 4,
+        "UpgradeVersion": 5,
+        "Rename": 6,
+        "Share": 7,
+        "Move": 8
+      }
+    },
+    "inputName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "oldValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "newValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetType": {
+      "enum": [
+        "AirCooler",
+        "Boiler",
+        "Compressor",
+        "FiredHeater",
+        "HorizontalVessel",
+        "PipingSystem",
+        "PressureReliefDevice",
+        "Pump",
+        "ShellTubeHeatExchanger",
+        "Sphere",
+        "StorageTank",
+        "VerticalVessel",
+        "Other"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "AirCooler": 1,
+        "Boiler": 2,
+        "Compressor": 3,
+        "FiredHeater": 4,
+        "HorizontalVessel": 5,
+        "PipingSystem": 6,
+        "PressureReliefDevice": 7,
+        "Pump": 8,
+        "ShellTubeHeatExchanger": 9,
+        "Sphere": 10,
+        "StorageTank": 11,
+        "VerticalVessel": 12,
+        "Other": 13
+      }
+    }
+  }
+}

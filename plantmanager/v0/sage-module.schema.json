@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/sage-module.schema.json",
+  "title": "SageModule",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "sageModuleEntityId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "calculationTypeId": {
+      "enum": [
+        "Component",
+        "Sage",
+        "Level1",
+        "Flash",
+        "Rbi",
+        "Equipment",
+        "FfsThinning",
+        "FfsCracking",
+        "FfsPitting",
+        "FfsCreep",
+        "FfsDent",
+        "FfsGouge"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Component": 1,
+        "Sage": 2,
+        "Level1": 3,
+        "Flash": 4,
+        "Rbi": 5,
+        "Equipment": 6,
+        "FfsThinning": 7,
+        "FfsCracking": 8,
+        "FfsPitting": 9,
+        "FfsCreep": 10,
+        "FfsDent": 11,
+        "FfsGouge": 12
+      }
+    },
+    "tenantKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "module": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastCalculation": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inputFile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "moduleCalculationResult": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sageModuleName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "configuration": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "annotations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "latestAuditId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/parallel-calculation-items-dto.schema.json",
+  "title": "ParallelCalculationItemsDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "rbi": {
+      "type": "boolean"
+    },
+    "tank": {
+      "type": "boolean"
+    },
+    "onlySetNulls": {
+      "type": "boolean"
+    },
+    "components": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "isNew": {
+            "type": "boolean"
+          },
+          "onlySetNulls": {
+            "type": "boolean"
+          },
+          "calculationTypes": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "enum": [
+                "Component",
+                "Sage",
+                "Level1",
+                "Flash",
+                "Rbi",
+                "Equipment",
+                "FfsThinning",
+                "FfsCracking",
+                "FfsPitting",
+                "FfsCreep",
+                "FfsDent",
+                "FfsGouge"
+              ],
+              "type": "string",
+              "x-enum-map": {
+                "Component": 1,
+                "Sage": 2,
+                "Level1": 3,
+                "Flash": 4,
+                "Rbi": 5,
+                "Equipment": 6,
+                "FfsThinning": 7,
+                "FfsCracking": 8,
+                "FfsPitting": 9,
+                "FfsCreep": 10,
+                "FfsDent": 11,
+                "FfsGouge": 12
+              }
+            }
+          },
+          "calculateMawp": {
+            "type": "boolean"
+          },
+          "updateGoverningTmin": {
+            "type": "boolean"
+          },
+          "sageModuleEntityId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "cmls": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "isNew": {
+            "type": "boolean"
+          },
+          "onlySetNulls": {
+            "type": "boolean"
+          },
+          "props": {
+            "enum": [
+              "All",
+              "BasicRates",
+              "Scra",
+              "GoverningRate",
+              "Dates"
+            ],
+            "type": "string",
+            "x-enum-map": {
+              "All": 0,
+              "BasicRates": 1,
+              "Scra": 2,
+              "GoverningRate": 3,
+              "Dates": 4
+            }
+          },
+          "calculateMawp": {
+            "type": "boolean"
+          },
+          "updateGoverningTmin": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "activities": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "isNew": {
+            "type": "boolean"
+          },
+          "onlySetNulls": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

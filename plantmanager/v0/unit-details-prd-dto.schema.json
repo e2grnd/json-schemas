@@ -1,0 +1,231 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/unit-details-prd-dto.schema.json",
+  "title": "UnitDetailsPrdDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assetTypeId": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "unitName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetDescription": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reliefDeviceType": {
+      "enum": [
+        "Conventional",
+        "Balanced",
+        "Pilot",
+        "Rupture_Disk"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Conventional": 1,
+        "Balanced": 2,
+        "Pilot": 3,
+        "Rupture_Disk": 4
+      }
+    },
+    "serviceStatus": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "pid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "accessLimitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "serialNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "makeModel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jurisdictionalRegistrationNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jurisdictionalSerialNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inletType": {
+      "enum": [
+        "FlatFace",
+        "RaisedFace",
+        "RingJoint",
+        "ConeRing",
+        "Threaded"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "FlatFace": 1,
+        "RaisedFace": 2,
+        "RingJoint": 3,
+        "ConeRing": 4,
+        "Threaded": 5
+      }
+    },
+    "inletRating": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "inletSize": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "outletRating": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "outletSize": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "temperatureCorrection": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "cdtp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "springNumber": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "lift": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "capacity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "orificeArea": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "setPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "backPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "dischargeLocation": {
+      "enum": [
+        "Flare",
+        "Atmosphere",
+        "ClosedSystem"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Flare": 1,
+        "Atmosphere": 2,
+        "ClosedSystem": 3
+      }
+    },
+    "prdLocation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "protectedAssets": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

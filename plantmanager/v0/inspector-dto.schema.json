@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/inspector-dto.schema.json",
+  "title": "InspectorDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "Active",
+        "Inactive"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Active": 1,
+        "Inactive": 2
+      }
+    },
+    "email": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updateType": {
+      "enum": [
+        "Add",
+        "Update",
+        "Delete"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Add": 1,
+        "Update": 2,
+        "Delete": 3
+      }
+    }
+  }
+}

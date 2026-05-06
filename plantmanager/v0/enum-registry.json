@@ -1,0 +1,567 @@
+{
+  "ActivityEffectiveness": {
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 4,
+    "E": 5
+  },
+  "ActivityPhase": {
+    "Planning": 1,
+    "Execution": 2
+  },
+  "ActivityStatus": {
+    "None": 0,
+    "Planned": 1,
+    "InProgress": 2,
+    "Completed": 3
+  },
+  "ActivityTemplates": {
+    "Generic": 1,
+    "Survey": 2,
+    "Inspection": 3
+  },
+  "ApiServiceClasses": {
+    "Class1": 1,
+    "Class2": 2,
+    "Class3": 3,
+    "Class4": 4,
+    "Unknown": 5
+  },
+  "AssetTypes": {
+    "AirCooler": 1,
+    "Boiler": 2,
+    "Compressor": 3,
+    "FiredHeater": 4,
+    "HorizontalVessel": 5,
+    "PipingSystem": 6,
+    "PressureReliefDevice": 7,
+    "Pump": 8,
+    "ShellTubeHeatExchanger": 9,
+    "Sphere": 10,
+    "StorageTank": 11,
+    "VerticalVessel": 12,
+    "Other": 13
+  },
+  "AttachmentTableType": {
+    "ActivityItem": 1,
+    "ActivityFuturePlanning": 2,
+    "ActivityFutureInProgress": 3,
+    "Asset": 4,
+    "Cml": 5,
+    "Findings": 6,
+    "SageModule": 7,
+    "Unit": 8,
+    "SageTreeAttachments": 9
+  },
+  "AttachmentType": {
+    "Folder": 1,
+    "File": 2
+  },
+  "AuditActionTarget": {
+    "Plant": 0,
+    "Unit": 1,
+    "Asset": 2,
+    "Cml": 3,
+    "Component": 4,
+    "Circuit": 5,
+    "Activity": 6,
+    "Inspector": 7,
+    "ActivityType": 8,
+    "Reading": 9,
+    "Finding": 10,
+    "FluidStream": 11,
+    "DamageMonitoringLocation": 12,
+    "ActivityHistoryItem": 13
+  },
+  "AuditActionType": {
+    "Add": 1,
+    "Update": 2,
+    "Copy": 3,
+    "Import": 4,
+    "UpgradeVersion": 5,
+    "Rename": 6,
+    "Share": 7,
+    "Move": 8
+  },
+  "AxisType": {
+    "Numeric": 0,
+    "DateNumeric": 1
+  },
+  "CalculationOutputStatus": {
+    "New": 0,
+    "Calculated": 1,
+    "Warning": 2,
+    "Error": 3,
+    "Stale": 4,
+    "NewVersion": 5
+  },
+  "ChartLineStyle": {
+    "Dashed": 0,
+    "DotDashed": 1,
+    "Dotted": 2,
+    "Solid": 3
+  },
+  "ChartType": {
+    "Bar": 0,
+    "Line": 1,
+    "Pie": 2,
+    "Scatter": 3,
+    "Surface": 4
+  },
+  "CmlPropGroups": {
+    "All": 0,
+    "BasicRates": 1,
+    "Scra": 2,
+    "GoverningRate": 3,
+    "Dates": 4
+  },
+  "Code": {
+    "SectionI": 0,
+    "Section8D1": 1,
+    "Section8D2": 2,
+    "B31_1": 3,
+    "B31_3": 4,
+    "B31_4": 5,
+    "B31_8": 6,
+    "API_650": 7,
+    "API_653": 8,
+    "API_620": 9,
+    "API_530": 10,
+    "AS_1210": 11,
+    "AS_1210_1H": 12,
+    "Section2D": 13,
+    "Wrc503": 14,
+    "Mpc": 15,
+    "Section3D1C1": 16,
+    "Section3D1C2": 17,
+    "Section3D1C3": 18,
+    "Section3D1Cmc": 19,
+    "Section3D3Ctc": 20,
+    "Section3D3Csc": 21,
+    "Section12": 22,
+    "Section8D2C1": 23,
+    "B31T": 24,
+    "ASMECodes": 25,
+    "APICodes": 26,
+    "Section3D5": 27,
+    "STS_1": 28,
+    "JIS_B_8265": 29,
+    "HPGSL": 30,
+    "NonCodeMaterial": 31,
+    "UnsupportedCode": 998,
+    "PhysicalProperty": 999,
+    "AllCodes": 1000
+  },
+  "CommentTypes": {
+    "Asset": 1,
+    "SageModule": 2,
+    "Unit": 3
+  },
+  "ComponentStatuses": {
+    "Active": 1,
+    "Disabled": 2
+  },
+  "ComponentTypes": {
+    "UNKNOWN": 0,
+    "PIPE": 1,
+    "ELBOW": 2,
+    "FITTING": 3,
+    "HEAD": 4,
+    "SHELL": 5,
+    "NOZZLE": 6,
+    "PLATE": 7,
+    "BOILER_TUBE": 8,
+    "FLOOR": 9,
+    "ROOF": 10,
+    "RISER": 11,
+    "PLUG": 12,
+    "TUBE": 13,
+    "COURSE": 14,
+    "ANNULAR_PLATE": 15,
+    "HEADER_BOX": 16,
+    "OTHER": 17
+  },
+  "DamageMode": {
+    "All": 0,
+    "Thinning": 1,
+    "External": 2,
+    "Cracking": 3
+  },
+  "DamageMonitoringLocationAssessmentLevels": {
+    "Level1": 1,
+    "Level2": 2
+  },
+  "DamageMonitoringLocationCrackDescriptions": {
+    "CircumferentialNoWeld": 1,
+    "CircumferentialNormalToWeld": 2,
+    "CircumferentialParallelToWeld": 3,
+    "LongitudinalNoWeld": 4,
+    "LongitudinalNormalToWeld": 5,
+    "LongitudinalParallelToWeld": 6
+  },
+  "DamageMonitoringLocationCreepWeldTypes": {
+    "None": 1,
+    "Longitudinal": 2,
+    "Circumferential": 3,
+    "BothDirections": 4
+  },
+  "DamageMonitoringLocationDamageLocations": {
+    "External": 1,
+    "Internal": 2
+  },
+  "DamageMonitoringLocationGridOrientations": {
+    "Circumferential": 1,
+    "Longitudinal": 2
+  },
+  "DamageMonitoringLocationPittingTypes": {
+    "LocalizedPitting": 1,
+    "WidespreadPitting": 2
+  },
+  "DamageMonitoringLocationStatuses": {
+    "New": 1,
+    "DataCollection": 2,
+    "Review": 3,
+    "Recommendation": 4,
+    "Resolved": 5
+  },
+  "DamageMonitoringLocationTypes": {
+    "LocalThinArea": 1,
+    "GeneralThinning": 2,
+    "Cracking": 3,
+    "Pitting": 4,
+    "Creep": 5,
+    "Dent": 6,
+    "Gouge": 7
+  },
+  "DataFlag": {
+    "None": 0,
+    "Assumption": 1,
+    "Default": 2,
+    "NeedsReview": 3,
+    "Suspect": 4,
+    "CheckUnits": 5
+  },
+  "DueDateChoice": {
+    "Calculated": 1,
+    "Rbi": 2,
+    "Specified": 3
+  },
+  "DueDateReportBelowRetirements": {
+    "Include": 1,
+    "Omit": 2,
+    "BelowRetirementOnly": 3
+  },
+  "EstablishingCorrosionRate": {
+    "ProbableRate": 1,
+    "TimeInterval": 2
+  },
+  "FileType": {
+    "UNKNOWN": 0,
+    "PDF": 1,
+    "IMAGE": 2,
+    "TEXT": 3
+  },
+  "FillDirection": {
+    "Up": 0,
+    "Down": 1
+  },
+  "FindingPriority": {
+    "One": 1,
+    "Two": 2,
+    "Three": 3,
+    "Four": 4,
+    "Five": 5,
+    "Six": 6,
+    "Seven": 7,
+    "Eight": 8,
+    "Nine": 9,
+    "Ten": 10
+  },
+  "FindingStatus": {
+    "New": 1,
+    "Assigned": 2,
+    "InProgress": 3,
+    "ClosedNotComplete": 4,
+    "ClosedComplete": 5
+  },
+  "FittingTypes": {
+    "UNKNOWN": 0,
+    "TEE": 1,
+    "REDUCER": 2,
+    "RED_ELBOW": 3,
+    "RED_TEE": 4,
+    "CAP": 5
+  },
+  "GoverningCorrosionRateTypes": {
+    "LongRate": 1,
+    "ShortRate": 2,
+    "BestFitRate": 3,
+    "ScraLongRate": 4,
+    "ScraShortRate": 5,
+    "ScraStatShortRate": 6,
+    "ScraStatLongRate": 7,
+    "EstimatedRate": 8
+  },
+  "HeaderBoxPlateType": {
+    "Top": 1,
+    "Side": 2,
+    "End": 3
+  },
+  "HierarchyPermissionType": {
+    "None": 0,
+    "User": 1,
+    "ActiveDirectory": 2
+  },
+  "ImportType": {
+    "Survey": 1,
+    "Asset": 2,
+    "Prd": 3,
+    "Component": 4,
+    "Group": 5,
+    "Cml": 6,
+    "ActivityHistory": 7,
+    "ActivityFuture": 8,
+    "Plant": 9,
+    "Unit": 10,
+    "Sage": 11,
+    "Attachment": 12,
+    "ActivityFutureRBI": 13,
+    "ActivityHistoryRBI": 14,
+    "DamageMechanism": 15,
+    "Comment": 16,
+    "ActivityAttachment": 17,
+    "ComponentSage": 18,
+    "ComponentExpert": 19,
+    "Multiple": 100
+  },
+  "InspectionApproach": {
+    "Intrusive": 1,
+    "NonIntrusive": 2
+  },
+  "InspectionDrivers": {
+    "HalfLife": 1,
+    "MaximumInterval": 2,
+    "Specified": 3
+  },
+  "InspectionMethodTypes": {
+    "UNKOWN": 0,
+    "UT": 1,
+    "RT": 2,
+    "N": 3,
+    "I": 4,
+    "S": 5,
+    "H": 6,
+    "D": 7,
+    "C": 8,
+    "P": 9,
+    "V": 10,
+    "Y": 11,
+    "M": 12
+  },
+  "InspectorStatus": {
+    "Active": 1,
+    "Inactive": 2
+  },
+  "IntellijointThermalModel": {
+    "FEA": 1,
+    "WRC510": 2
+  },
+  "InternalThinningTypes": {
+    "General": 1,
+    "Local": 2
+  },
+  "InventoryGroupUpdateType": {
+    "None": 0,
+    "Insert": 1,
+    "Update": 2,
+    "Delete": 3
+  },
+  "Isolation": {
+    "C": 0,
+    "B": 1,
+    "A": 2
+  },
+  "LegendPlacementHorizontal": {
+    "LeftOutside": 0,
+    "Left": 1,
+    "Center": 2,
+    "Right": 3,
+    "RightOutside": 4
+  },
+  "LegendPlacementVertical": {
+    "TopOutside": 0,
+    "Top": 1,
+    "Center": 2,
+    "Bottom": 3,
+    "BottomOutside": 4
+  },
+  "LineChartSeriesType": {
+    "Point": 0,
+    "Line": 1,
+    "PointArea": 2,
+    "LineArea": 3
+  },
+  "LookupTypes": {
+    "StandardTube": 1,
+    "MaterialGroups": 2
+  },
+  "MarkerShape": {
+    "Circle": 0,
+    "None": 1,
+    "Hexagon": 2,
+    "InverseTriangle": 3,
+    "Pentagon": 4,
+    "Square": 5,
+    "Star": 6
+  },
+  "PrdDischargeLocation": {
+    "Flare": 1,
+    "Atmosphere": 2,
+    "ClosedSystem": 3
+  },
+  "PrdEndType": {
+    "FlatFace": 1,
+    "RaisedFace": 2,
+    "RingJoint": 3,
+    "ConeRing": 4,
+    "Threaded": 5
+  },
+  "PrdType": {
+    "Conventional": 1,
+    "Balanced": 2,
+    "Pilot": 3,
+    "Rupture_Disk": 4
+  },
+  "ReportFormat": {
+    "Pdf": 0,
+    "Txt": 1
+  },
+  "SageApprovalStatus": {
+    "NoStatus": 0,
+    "ReleasedForApproval": 1,
+    "Approved": 2,
+    "Rejected": 3,
+    "Revoked": 4,
+    "Reset": 5
+  },
+  "SageCalculationTypes": {
+    "Component": 1,
+    "Sage": 2,
+    "Level1": 3,
+    "Flash": 4,
+    "Rbi": 5,
+    "Equipment": 6,
+    "FfsThinning": 7,
+    "FfsCracking": 8,
+    "FfsPitting": 9,
+    "FfsCreep": 10,
+    "FfsDent": 11,
+    "FfsGouge": 12
+  },
+  "SageInputFileType": {
+    "Inp": 1,
+    "Json": 2
+  },
+  "SageOwnerType": {
+    "Folder": 1,
+    "Tree": 2,
+    "Component": 3,
+    "Asset": 4
+  },
+  "SageTreeType": {
+    "Folder": 1,
+    "Module": 2,
+    "Attachment": 3,
+    "RootUser": 4,
+    "RootAsset": 5
+  },
+  "SageUserTypes": {
+    "Apprentice": 1,
+    "Practitioner": 2,
+    "Master": 3
+  },
+  "ScaleType": {
+    "Log": 0,
+    "Linear": 1
+  },
+  "SeriesCellType": {
+    "Quadrilateral": 0,
+    "Triangle": 1,
+    "Functional": 2
+  },
+  "ServiceStatus": {
+    "InService": 1,
+    "OutOfService": 2,
+    "Decommissioned": 3
+  },
+  "SingleAttachmentType": {
+    "ActivitySurveyCalibration": 1
+  },
+  "Susceptibility": {
+    "None": 1,
+    "VeryLow": 2,
+    "Low": 3,
+    "Medium": 4,
+    "High": 5
+  },
+  "ToughnessCurveDesignations": {
+    "TEMP": 0,
+    "I": 1,
+    "II": 2,
+    "III": 3,
+    "IV": 4,
+    "V": 5,
+    "VI": 6,
+    "IIIA": 31,
+    "IVA": 41,
+    "A": 101,
+    "B": 102,
+    "C": 103,
+    "D": 104,
+    "CI_20": 201,
+    "CI_20_A": 202,
+    "CS20A": 203,
+    "CS0": 204,
+    "CS_20": 205,
+    "CS_20A": 206,
+    "CS_50": 207,
+    "CS_55": 208,
+    "CS_A": 209,
+    "CS_B": 210,
+    "CS_C": 211,
+    "CS_D": 212,
+    "CU_325": 213,
+    "CU_452": 214,
+    "LA20": 215,
+    "LA0": 216,
+    "LA_100": 217,
+    "LA_150": 218,
+    "LA_20": 219,
+    "LA_275": 220,
+    "LA_320": 221,
+    "LA_40": 222,
+    "LA_55": 223,
+    "LA_75": 224,
+    "SS_20": 225,
+    "SS_325": 226,
+    "SS_425": 227,
+    "SS_60": 228,
+    "T1_75": 229
+  },
+  "UnitSystem": {
+    "English": 0,
+    "Metric": 1
+  },
+  "UpdateType": {
+    "Add": 1,
+    "Update": 2,
+    "Delete": 3
+  },
+  "ViewDirection": {
+    "Top": 0,
+    "XSide": 1,
+    "YSide": 2,
+    "Skew": 3
+  }
+}

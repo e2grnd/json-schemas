@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/damage-monitoring-location-pitting-types.schema.json",
+  "title": "DamageMonitoringLocationPittingTypes",
+  "type": "string",
+  "enum": [
+    "LocalizedPitting",
+    "WidespreadPitting"
+  ],
+  "x-enum-map": {
+    "LocalizedPitting": 1,
+    "WidespreadPitting": 2
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/component-rbi-display-dto.schema.json",
+  "title": "ComponentRbiDisplayDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "successfulCalculation": {
+      "type": "boolean"
+    },
+    "recommendedThinningGrade": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "D": 4,
+        "E": 5
+      }
+    },
+    "recommendedThinningDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "recommendedCrackingDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "recommendedExternalDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "rbiDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "targetDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "planDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "thinningRiskRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningDfRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningPofRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningRiskPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningDfPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningPofPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningRiskPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningDfPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "thinningPofPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingRiskRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingDfRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingPofRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingRiskPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingDfPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingPofPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingRiskPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingDfPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "crackingPofPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalRiskRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalDfRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalPofRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalRiskPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalDfPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalPofPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalRiskPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalDfPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "externalPofPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalRiskRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalDfRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalPofRbiDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalRiskPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalDfPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalPofPlanDate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalRiskPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalDfPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "totalPofPlanDateWinsp": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "targetBasis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "planStatus": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "consequenceArea": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "financialConsequence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "liquidVolume": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "vaporVolume": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "fluidMass": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "operatingPressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "operatingTemperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "fluidStreamId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "sageModuleId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "calculationMessageHtml": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectionPlanTargets": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

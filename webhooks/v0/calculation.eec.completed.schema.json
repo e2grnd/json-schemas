@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v0/calculation.eec.completed.schema.json",
+  "title": "calculation.eec.completed data",
+  "description": "Data payload for the calculation.eec.completed event. Models EecCalcOutput from activitycontracts: includes eecJobId (upstream NUID from job-grpc Init RPC) and durationMs alongside result access.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["jobId", "tenantKey", "calcType"],
+  "properties": {
+    "jobId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUIDv7 job identifier; also the Temporal workflow ID."
+    },
+    "tenantKey": {
+      "type": "string",
+      "description": "Tenant identifier of the submitting organization."
+    },
+    "calcType": {
+      "type": "string",
+      "enum": ["eec"],
+      "description": "Calculator type. Always 'eec' for this event."
+    },
+    "calcName": {
+      "type": "string",
+      "description": "Optional human-readable calculation name supplied at submission."
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp when the job completed."
+    },
+    "durationMs": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Wall-clock duration of the calculation activity as observed by the worker, in milliseconds."
+    },
+    "outputUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to download the protojson CalculatorResponse (CRS) result. May be a signed short-lived URL."
+    },
+    "eecJobId": {
+      "type": "string",
+      "description": "Upstream job-grpc job ID (NUID) assigned during Init RPC, captured for traceability."
+    }
+  }
+}

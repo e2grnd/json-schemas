@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/cml-default-values-from-asset.schema.json",
+  "title": "CmlDefaultValuesFromAsset",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "maximumInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "accessLimitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

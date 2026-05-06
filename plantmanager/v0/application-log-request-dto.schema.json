@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/application-log-request-dto.schema.json",
+  "title": "ApplicationLogRequestDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "appName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "from": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "to": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "limit": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}

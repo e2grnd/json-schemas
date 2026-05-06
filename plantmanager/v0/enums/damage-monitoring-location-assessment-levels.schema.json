@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/enums/damage-monitoring-location-assessment-levels.schema.json",
+  "title": "DamageMonitoringLocationAssessmentLevels",
+  "type": "string",
+  "enum": [
+    "Level1",
+    "Level2"
+  ],
+  "x-enum-map": {
+    "Level1": 1,
+    "Level2": 2
+  }
+}

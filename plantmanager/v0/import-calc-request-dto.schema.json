@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/import-calc-request-dto.schema.json",
+  "title": "ImportCalcRequestDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "tenantKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetIdsWithAdds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "assetIdsWithUpdates": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "type": {
+      "enum": [
+        "Survey",
+        "Asset",
+        "Prd",
+        "Component",
+        "Group",
+        "Cml",
+        "ActivityHistory",
+        "ActivityFuture",
+        "Plant",
+        "Unit",
+        "Sage",
+        "Attachment",
+        "ActivityFutureRBI",
+        "ActivityHistoryRBI",
+        "DamageMechanism",
+        "Comment",
+        "ActivityAttachment",
+        "ComponentSage",
+        "ComponentExpert",
+        "Multiple"
+      ],
+      "type": "string",
+      "x-enum-map": {
+        "Survey": 1,
+        "Asset": 2,
+        "Prd": 3,
+        "Component": 4,
+        "Group": 5,
+        "Cml": 6,
+        "ActivityHistory": 7,
+        "ActivityFuture": 8,
+        "Plant": 9,
+        "Unit": 10,
+        "Sage": 11,
+        "Attachment": 12,
+        "ActivityFutureRBI": 13,
+        "ActivityHistoryRBI": 14,
+        "DamageMechanism": 15,
+        "Comment": 16,
+        "ActivityAttachment": 17,
+        "ComponentSage": 18,
+        "ComponentExpert": 19,
+        "Multiple": 100
+      }
+    }
+  }
+}

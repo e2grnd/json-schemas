@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/cml-detail-report-cml-dto.schema.json",
+  "title": "CmlDetailReportCmlDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "componentType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "size": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "minimumThickness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "orientation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nextInspection": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retirementDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "insulated": {
+      "type": "string"
+    },
+    "remainingLife": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "group": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "longRateMeasured": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shortRateMeasured": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "longRateStatistical": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shortRateStatistical": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectionMethod1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thickness1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectionMethod2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thickness2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectionMethod3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thickness3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mawp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

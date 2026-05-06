@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/plantmanager/v0/component-nav-dto.schema.json",
+  "title": "ComponentNavDto",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unitId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "conditionMonitoringLocationsCount": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}
