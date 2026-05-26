@@ -58,6 +58,7 @@
         { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.equipment.created.schema.json" },
         { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.equipment.deleted.schema.json" },
         { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.equipment.updated.schema.json" },
+        { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.finding.created.schema.json" },
         { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/subscription.disabled.schema.json" },
         { "$ref": "https://e2grnd.github.io/json-schemas/webhooks/v0/webhook.test.schema.json" }
       ]

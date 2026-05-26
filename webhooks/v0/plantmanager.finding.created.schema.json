@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.finding.created.schema.json",
+  "title": "plantmanager.finding.created data",
+  "description": "Data payload for the plantmanager.finding.created event, emitted when a finding is recorded in PlantManager.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["finding", "links"],
+  "properties": {
+    "finding": {
+      "$ref": "https://e2grnd.github.io/json-schemas/plantmanager/v0/finding-dto.schema.json",
+      "description": "The finding record as returned by the hub API."
+    },
+    "links": {
+      "type": "object",
+      "description": "Related resource URIs.",
+      "required": ["asset"],
+      "additionalProperties": {
+        "type": "string",
+        "format": "uri"
+      },
+      "properties": {
+        "asset": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI of the asset (equipment) associated with this finding in PlantManager."
+        }
+      }
+    }
+  }
+}
