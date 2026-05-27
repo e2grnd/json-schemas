@@ -275,11 +275,15 @@ describe("envelope.schema.json", () => {
   })
 
   // -------------------------------------------------------------------------
-  // Standalone validation: equipment schemas are valid against their own
+  // Standalone validation: PlantManager schemas are valid against their own
   // individual schema (bypassing oneOf).
-  describe("plantmanager.equipment schemas — standalone validation", () => {
-    for (const suffix of ["created", "updated", "deleted"]) {
-      const eventType = `plantmanager.equipment.${suffix}`
+  describe("plantmanager schemas — standalone validation", () => {
+    for (const eventType of [
+      "plantmanager.equipment.created",
+      "plantmanager.equipment.updated",
+      "plantmanager.equipment.deleted",
+      "plantmanager.finding.created",
+    ]) {
       it(`${eventType} data is valid against its own schema`, () => {
         const schemaId = `https://e2grnd.github.io/json-schemas/webhooks/v0/${eventType}.schema.json`
         const validateSingle = ajv.getSchema(schemaId)
@@ -289,6 +293,35 @@ describe("envelope.schema.json", () => {
         expect(result).toBe(true)
       })
     }
+  })
+
+  // -------------------------------------------------------------------------
+  describe("plantmanager schemas — links rejects additional properties", () => {
+    it("rejects unknown link on equipment.created", () => {
+      const schemaId = `https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.equipment.created.schema.json`
+      const validateSingle = ajv.getSchema(schemaId)!
+      const data = {
+        ...FIXTURES["plantmanager.equipment.created"],
+        links: {
+          ...(FIXTURES["plantmanager.equipment.created"] as any).links,
+          bogus: "https://example.com/nope",
+        },
+      }
+      expect(validateSingle(data)).toBe(false)
+    })
+
+    it("rejects unknown link on finding.created", () => {
+      const schemaId = `https://e2grnd.github.io/json-schemas/webhooks/v0/plantmanager.finding.created.schema.json`
+      const validateSingle = ajv.getSchema(schemaId)!
+      const data = {
+        ...FIXTURES["plantmanager.finding.created"],
+        links: {
+          ...(FIXTURES["plantmanager.finding.created"] as any).links,
+          bogus: "https://example.com/nope",
+        },
+      }
+      expect(validateSingle(data)).toBe(false)
+    })
   })
 
   // -------------------------------------------------------------------------
