@@ -28,10 +28,7 @@
       "type": "object",
       "description": "Related resource URIs. Note: the self link may no longer resolve after deletion.",
       "required": ["self"],
-      "additionalProperties": {
-        "type": "string",
-        "format": "uri"
-      },
+      "additionalProperties": false,
       "properties": {
         "self": {
           "type": "string",

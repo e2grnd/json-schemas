@@ -15,10 +15,7 @@
       "type": "object",
       "description": "Related resource URIs.",
       "required": ["self"],
-      "additionalProperties": {
-        "type": "string",
-        "format": "uri"
-      },
+      "additionalProperties": false,
       "properties": {
         "self": {
           "type": "string",
