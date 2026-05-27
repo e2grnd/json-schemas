@@ -5,75 +5,50 @@
   "description": "Data payload for the plantmanager.equipment.deleted event, emitted when an equipment record is deleted from PlantManager.",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "id"
-  ],
+  "required": ["equipment", "links"],
   "properties": {
-    "id": {
-      "type": "string",
-      "format": "uuid"
-    },
-    "name": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "type": {
-      "type": "string",
-      "enum": [
-        "AirCooler",
-        "Boiler",
-        "Compressor",
-        "FiredHeater",
-        "HorizontalVessel",
-        "PipingSystem",
-        "PressureReliefDevice",
-        "Pump",
-        "ShellTubeHeatExchanger",
-        "Sphere",
-        "StorageTank",
-        "VerticalVessel",
-        "Other"
-      ],
-      "x-enum-map": {
-        "AirCooler": 1,
-        "Boiler": 2,
-        "Compressor": 3,
-        "FiredHeater": 4,
-        "HorizontalVessel": 5,
-        "PipingSystem": 6,
-        "PressureReliefDevice": 7,
-        "Pump": 8,
-        "ShellTubeHeatExchanger": 9,
-        "Sphere": 10,
-        "StorageTank": 11,
-        "VerticalVessel": 12,
-        "Other": 13
+    "equipment": {
+      "type": "object",
+      "description": "Identifying subset of the deleted equipment record.",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Identifier of the deleted equipment record."
+        },
+        "name": {
+          "type": ["string", "null"],
+          "description": "Name of the equipment at time of deletion."
+        }
       }
     },
-    "unitId": {
-      "type": "string",
-      "format": "uuid"
-    },
-    "serviceStatus": {
-      "type": "string",
-      "enum": [
-        "InService",
-        "OutOfService",
-        "Decommissioned"
-      ],
-      "x-enum-map": {
-        "InService": 1,
-        "OutOfService": 2,
-        "Decommissioned": 3
+    "links": {
+      "type": "object",
+      "description": "Related resource URIs. Note: the self link may no longer resolve after deletion.",
+      "required": ["self"],
+      "additionalProperties": {
+        "type": "string",
+        "format": "uri"
+      },
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI of the deleted equipment record in PlantManager."
+        },
+        "unit": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI of the parent unit."
+        },
+        "plant": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI of the parent plant."
+        }
       }
-    },
-    "description": {
-      "type": [
-        "string",
-        "null"
-      ]
     }
   }
 }

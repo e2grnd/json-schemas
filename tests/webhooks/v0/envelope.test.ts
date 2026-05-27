@@ -123,23 +123,26 @@ const FIXTURES: Record<string, Record<string, unknown>> = {
     ...SAGE_BASE,
     startedAt: "2025-01-15T12:00:05.000Z",
   },
-  // Equipment schemas share the same EquipmentDto shape (created/updated are
-  // identical, deleted is a subset).  oneOf discrimination relies on
-  // additionalProperties:false rejecting fields present in the full schema but
-  // absent from the deleted subset.  A payload with a field only in the full
-  // schemas (e.g. designPressure) will match created+updated but NOT deleted,
-  // narrowing to two — still too many for strict oneOf.  For now we test them
-  // individually rather than through the envelope oneOf.
+  // Equipment schemas wrap the EquipmentDto (or a subset for deleted) inside
+  // an `equipment` key, plus a `links` object with hierarchy URIs.
+  // created and updated share the full DTO shape; deleted is a slim subset.
+  // oneOf still cannot disambiguate created vs updated (identical shape), so
+  // we continue to test them individually outside the oneOf suite.
   "plantmanager.equipment.created": {
-    id: EQUIP_ID,
-    name: "V-101",
-    designPressure: 150.0,
+    equipment: { id: EQUIP_ID, name: "V-101", designPressure: 150.0 },
+    links: { self: "https://pm.example.com/equipment/V-101" },
   },
-  "plantmanager.equipment.deleted": { id: EQUIP_ID, name: "V-101" },
+  "plantmanager.equipment.deleted": {
+    equipment: { id: EQUIP_ID, name: "V-101" },
+    links: { self: "https://pm.example.com/equipment/V-101" },
+  },
   "plantmanager.equipment.updated": {
-    id: EQUIP_ID,
-    name: "V-101",
-    designPressure: 150.0,
+    equipment: { id: EQUIP_ID, name: "V-101", designPressure: 150.0 },
+    links: { self: "https://pm.example.com/equipment/V-101" },
+  },
+  "plantmanager.finding.created": {
+    finding: { id: EQUIP_ID, tenantKey: "acme" },
+    links: { asset: "https://pm.example.com/equipment/V-101" },
   },
   "subscription.disabled": {
     subscriptionId: SUB_ID,
@@ -249,10 +252,11 @@ describe("envelope.schema.json", () => {
   })
 
   // -------------------------------------------------------------------------
-  // Equipment schemas (created/updated/deleted) share an identical or subset
-  // shape derived from EquipmentDto, so the envelope's oneOf cannot
-  // disambiguate them by payload shape alone.  We test those schemas
-  // individually below and skip them in the oneOf suite.
+  // Equipment created/updated wrap the same EquipmentDto so the envelope's
+  // oneOf cannot disambiguate them by payload shape alone.  Deleted has a
+  // distinct slim subset and *can* be distinguished, but we keep all three
+  // together for clarity.  We test those schemas individually below and
+  // skip them in the oneOf suite.
   const ONEOF_SKIP = new Set([
     "plantmanager.equipment.created",
     "plantmanager.equipment.updated",
